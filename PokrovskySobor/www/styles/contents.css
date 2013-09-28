@@ -1,0 +1,414 @@
+/* line 17, ../../app/styles/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../app/styles/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+/* line 24, ../../app/styles/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../app/styles/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../app/styles/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../app/styles/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../app/styles/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../app/styles/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../app/styles/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Regular';
+  src: url("fonts/ptn57f-webfont.eot");
+  src: url("fonts/ptn57f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn57f-webfont.woff") format("woff"), url("fonts/ptn57f-webfont.ttf") format("truetype"), url("fonts/ptn57f-webfont.svg#pt_sans_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Bold';
+  src: url("fonts/ptn77f-webfont.eot");
+  src: url("fonts/ptn77f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn77f-webfont.woff") format("woff"), url("fonts/ptn77f-webfont.ttf") format("truetype"), url("fonts/ptn77f-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Demi Regular';
+  src: url("fonts/ptn67-webfont.eot");
+  src: url("fonts/ptn67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn67-webfont.woff") format("woff"), url("fonts/ptn67-webfont.ttf") format("truetype"), url("fonts/ptn67-webfont.svg#pt_sans_pro_narrow_demiRg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Regular';
+  src: url("fonts/ptz55f-webfont.eot");
+  src: url("fonts/ptz55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz55f-webfont.woff") format("woff"), url("fonts/ptz55f-webfont.ttf") format("truetype"), url("fonts/ptz55f-webfont.svg#pt_serif_captionregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Extra Bold Regular';
+  src: url("fonts/pts85-webfont.eot");
+  src: url("fonts/pts85-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts85-webfont.woff") format("woff"), url("fonts/pts85-webfont.ttf") format("truetype"), url("fonts/pts85-webfont.svg#pt_sans_pro_extra_boldregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Italic';
+  src: url("fonts/ptz56f-webfont.eot");
+  src: url("fonts/ptz56f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz56f-webfont.woff") format("woff"), url("fonts/ptz56f-webfont.ttf") format("truetype"), url("fonts/ptz56f-webfont.svg#pt_serif_captionitalic") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Demi Regular';
+  src: url("fonts/pts67-webfont.eot");
+  src: url("fonts/pts67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts67-webfont.woff") format("woff"), url("fonts/pts67-webfont.ttf") format("truetype"), url("fonts/pts67-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Light Regular';
+  src: url("fonts/ptn47-webfont.eot");
+  src: url("fonts/ptn47-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn47-webfont.woff") format("woff"), url("fonts/ptn47-webfont.ttf") format("truetype"), url("fonts/ptn47-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Regular';
+  src: url("fonts/ptf55f-webfont.eot");
+  src: url("fonts/ptf55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf55f-webfont.woff") format("woff"), url("fonts/ptf55f-webfont.ttf") format("truetype"), url("fonts/ptf55f-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Caption Regular';
+  src: url("fonts/ptc55f-webfont.eot");
+  src: url("fonts/ptc55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptc55f-webfont.woff") format("woff"), url("fonts/ptc55f-webfont.ttf") format("truetype"), url("fonts/ptc55f-webfont.svg#pt_sans_captionregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Extra Bold Regular';
+  src: url("fonts/ptn87-webfont.eot");
+  src: url("fonts/ptn87-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn87-webfont.woff") format("woff"), url("fonts/ptn87-webfont.ttf") format("truetype"), url("fonts/ptn87-webfont.svg#pt_sans_pro_narrow_extra_boRg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url("fonts/pts55f-webfont.eot");
+  src: url("fonts/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts55f-webfont.woff") format("woff"), url("fonts/pts55f-webfont.ttf") format("truetype"), url("fonts/pts55f-webfont.svg#pt_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Light';
+  src: url("fonts/pts47-webfont.eot");
+  src: url("fonts/pts47-webfont.eot") format("embedded-opentype"), url("fonts/pts47-webfont.woff") format("woff"), url("fonts/pts47-webfont.ttf") format("truetype"), url("fonts/pts47-webfont.svg#PTSansProCondensedLight") format("svg");
+}
+
+/* line 25, ../../app/styles/_base.scss */
+div, ul {
+  position: absolute;
+}
+
+/* line 29, ../../app/styles/_base.scss */
+.page {
+  left: 0px;
+  width: 1536px;
+  height: 2048px;
+}
+
+/* line 36, ../../app/styles/_base.scss */
+.page-header {
+  left: 101px;
+  top: 62px;
+  font-family: "PT Sans Pro Condensed Demi Regular";
+  font-size: 45px;
+  letter-spacing: 1px;
+}
+
+/* line 45, ../../app/styles/_base.scss */
+.color-gray {
+  color: #808183;
+}
+
+/* line 49, ../../app/styles/_base.scss */
+.underline {
+  border-bottom: 2px solid;
+}
+
+/* line 53, ../../app/styles/_base.scss */
+.button {
+  top: 52px;
+}
+/* line 56, ../../app/styles/_base.scss */
+.button.audio, .button.text {
+  left: 859px;
+}
+/* line 59, ../../app/styles/_base.scss */
+.button.model, .button.infographics {
+  left: 988px;
+}
+/* line 62, ../../app/styles/_base.scss */
+.button.plan {
+  left: 1117px;
+}
+/* line 65, ../../app/styles/_base.scss */
+.button.contents {
+  left: 1245px;
+}
+/* line 68, ../../app/styles/_base.scss */
+.button.back {
+  left: 1374px;
+}
+
+/* line 73, ../../app/styles/_base.scss */
+.page-hint {
+  left: 101px;
+  top: 272px;
+  font-family: "PT Sans Regular";
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+/* line 82, ../../app/styles/_base.scss */
+.ui-slider {
+  background: white;
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 20px;
+  border-top-right-radius: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+/* line 88, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-range {
+  top: 0px;
+  height: 100%;
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: #6c61a7;
+}
+/* line 98, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  outline-style: none;
+  margin-left: -23px;
+  margin-top: -5px;
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -38px;
+  background-repeat: no-repeat;
+  height: 46px;
+  width: 46px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.ui-slider .ui-slider-handle:active {
+  background-position: 0 -84px;
+}
+/* line 108, ../../app/styles/_base.scss */
+.ui-slider .value {
+  top: 46px;
+  font-family: "PT Sans Regular";
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+/* line 116, ../../app/styles/_base.scss */
+.ui-slider .min {
+  left: 0px;
+}
+/* line 119, ../../app/styles/_base.scss */
+.ui-slider .max {
+  right: 0px;
+}
+/* line 122, ../../app/styles/_base.scss */
+.ui-slider .current {
+  margin-left: -15px;
+}
+
+/* line 12, ../../app/styles/contents.scss */
+.button.back {
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -1712px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.back:active {
+  background-position: 0 -942px;
+}
+
+/* line 17, ../../app/styles/contents.scss */
+.background {
+  top: 169px;
+  background-image: url('../images/generated/contents-sea7fa9c871.png');
+  background-position: 0 -1400px;
+  background-repeat: no-repeat;
+  height: 1778px;
+  width: 1536px;
+}
+
+/* line 23, ../../app/styles/contents.scss */
+.photo {
+  left: 384px;
+  top: 398px;
+  background-image: url('../images/generated/contents-sea7fa9c871.png');
+  background-position: -534px -350px;
+  background-repeat: no-repeat;
+  height: 267px;
+  width: 267px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.photo:active {
+  background-position: -267px -350px;
+}
+
+/* line 30, ../../app/styles/contents.scss */
+.panorama {
+  left: 909px;
+  top: 398px;
+  background-image: url('../images/generated/contents-sea7fa9c871.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 267px;
+  width: 267px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.panorama:active {
+  background-position: -801px -350px;
+}
+
+/* line 37, ../../app/styles/contents.scss */
+.info {
+  left: 605px;
+  top: 620px;
+  background-image: url('../images/generated/contents-sea7fa9c871.png');
+  background-position: -267px 0;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 350px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.info:active {
+  background-position: -967px 0;
+}
+
+/* line 44, ../../app/styles/contents.scss */
+.temples {
+  left: 343px;
+  top: 883px;
+  background-image: url('../images/generated/contents-sea7fa9c871.png');
+  background-position: -617px -1050px;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 350px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.temples:active {
+  background-position: -967px -1050px;
+}
+
+/* line 51, ../../app/styles/contents.scss */
+.history {
+  left: 868px;
+  top: 883px;
+  background-image: url('../images/generated/contents-sea7fa9c871.png');
+  background-position: -1068px -350px;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 350px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.history:active {
+  background-position: -617px 0;
+}
+
+/* line 58, ../../app/styles/contents.scss */
+.about {
+  left: 122px;
+  top: 1187px;
+  background-image: url('../images/generated/contents-sea7fa9c871.png');
+  background-position: 0 -1050px;
+  background-repeat: no-repeat;
+  height: 267px;
+  width: 267px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.about:active {
+  background-position: 0 -350px;
+}
+
+/* line 65, ../../app/styles/contents.scss */
+.bonus {
+  left: 605px;
+  top: 1147px;
+  background-image: url('../images/generated/contents-sea7fa9c871.png');
+  background-position: 0 -700px;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 350px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.bonus:active {
+  background-position: -267px -1050px;
+}

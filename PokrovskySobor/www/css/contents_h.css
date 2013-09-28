@@ -1,0 +1,9 @@
+body {
+	background-color: rgb(254,205,4);
+	width: 2048px;
+	height: 1536px;
+}
+
+div.Basic-Text-Frame {
+	padding-left: 115px;
+}

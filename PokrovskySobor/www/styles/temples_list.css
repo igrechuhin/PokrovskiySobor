@@ -1,0 +1,849 @@
+/* line 17, ../../app/styles/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../app/styles/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+/* line 24, ../../app/styles/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../app/styles/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../app/styles/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../app/styles/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../app/styles/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../app/styles/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../app/styles/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Regular';
+  src: url("fonts/ptn57f-webfont.eot");
+  src: url("fonts/ptn57f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn57f-webfont.woff") format("woff"), url("fonts/ptn57f-webfont.ttf") format("truetype"), url("fonts/ptn57f-webfont.svg#pt_sans_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Bold';
+  src: url("fonts/ptn77f-webfont.eot");
+  src: url("fonts/ptn77f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn77f-webfont.woff") format("woff"), url("fonts/ptn77f-webfont.ttf") format("truetype"), url("fonts/ptn77f-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Demi Regular';
+  src: url("fonts/ptn67-webfont.eot");
+  src: url("fonts/ptn67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn67-webfont.woff") format("woff"), url("fonts/ptn67-webfont.ttf") format("truetype"), url("fonts/ptn67-webfont.svg#pt_sans_pro_narrow_demiRg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Regular';
+  src: url("fonts/ptz55f-webfont.eot");
+  src: url("fonts/ptz55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz55f-webfont.woff") format("woff"), url("fonts/ptz55f-webfont.ttf") format("truetype"), url("fonts/ptz55f-webfont.svg#pt_serif_captionregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Extra Bold Regular';
+  src: url("fonts/pts85-webfont.eot");
+  src: url("fonts/pts85-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts85-webfont.woff") format("woff"), url("fonts/pts85-webfont.ttf") format("truetype"), url("fonts/pts85-webfont.svg#pt_sans_pro_extra_boldregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Italic';
+  src: url("fonts/ptz56f-webfont.eot");
+  src: url("fonts/ptz56f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz56f-webfont.woff") format("woff"), url("fonts/ptz56f-webfont.ttf") format("truetype"), url("fonts/ptz56f-webfont.svg#pt_serif_captionitalic") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Demi Regular';
+  src: url("fonts/pts67-webfont.eot");
+  src: url("fonts/pts67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts67-webfont.woff") format("woff"), url("fonts/pts67-webfont.ttf") format("truetype"), url("fonts/pts67-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Light Regular';
+  src: url("fonts/ptn47-webfont.eot");
+  src: url("fonts/ptn47-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn47-webfont.woff") format("woff"), url("fonts/ptn47-webfont.ttf") format("truetype"), url("fonts/ptn47-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Regular';
+  src: url("fonts/ptf55f-webfont.eot");
+  src: url("fonts/ptf55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf55f-webfont.woff") format("woff"), url("fonts/ptf55f-webfont.ttf") format("truetype"), url("fonts/ptf55f-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Caption Regular';
+  src: url("fonts/ptc55f-webfont.eot");
+  src: url("fonts/ptc55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptc55f-webfont.woff") format("woff"), url("fonts/ptc55f-webfont.ttf") format("truetype"), url("fonts/ptc55f-webfont.svg#pt_sans_captionregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Extra Bold Regular';
+  src: url("fonts/ptn87-webfont.eot");
+  src: url("fonts/ptn87-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn87-webfont.woff") format("woff"), url("fonts/ptn87-webfont.ttf") format("truetype"), url("fonts/ptn87-webfont.svg#pt_sans_pro_narrow_extra_boRg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url("fonts/pts55f-webfont.eot");
+  src: url("fonts/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts55f-webfont.woff") format("woff"), url("fonts/pts55f-webfont.ttf") format("truetype"), url("fonts/pts55f-webfont.svg#pt_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Light';
+  src: url("fonts/pts47-webfont.eot");
+  src: url("fonts/pts47-webfont.eot") format("embedded-opentype"), url("fonts/pts47-webfont.woff") format("woff"), url("fonts/pts47-webfont.ttf") format("truetype"), url("fonts/pts47-webfont.svg#PTSansProCondensedLight") format("svg");
+}
+
+/* line 25, ../../app/styles/_base.scss */
+div, ul {
+  position: absolute;
+}
+
+/* line 29, ../../app/styles/_base.scss */
+.page {
+  left: 0px;
+  width: 1536px;
+  height: 2048px;
+}
+
+/* line 36, ../../app/styles/_base.scss */
+.page-header {
+  left: 101px;
+  top: 62px;
+  font-family: "PT Sans Pro Condensed Demi Regular";
+  font-size: 45px;
+  letter-spacing: 1px;
+}
+
+/* line 45, ../../app/styles/_base.scss */
+.color-gray {
+  color: #808183;
+}
+
+/* line 49, ../../app/styles/_base.scss */
+.underline {
+  border-bottom: 2px solid;
+}
+
+/* line 53, ../../app/styles/_base.scss */
+.button {
+  top: 52px;
+}
+/* line 56, ../../app/styles/_base.scss */
+.button.audio, .button.text {
+  left: 859px;
+}
+/* line 59, ../../app/styles/_base.scss */
+.button.model, .button.infographics {
+  left: 988px;
+}
+/* line 62, ../../app/styles/_base.scss */
+.button.plan {
+  left: 1117px;
+}
+/* line 65, ../../app/styles/_base.scss */
+.button.contents {
+  left: 1245px;
+}
+/* line 68, ../../app/styles/_base.scss */
+.button.back {
+  left: 1374px;
+}
+
+/* line 73, ../../app/styles/_base.scss */
+.page-hint {
+  left: 101px;
+  top: 272px;
+  font-family: "PT Sans Regular";
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+/* line 82, ../../app/styles/_base.scss */
+.ui-slider {
+  background: white;
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 20px;
+  border-top-right-radius: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+/* line 88, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-range {
+  top: 0px;
+  height: 100%;
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: #6c61a7;
+}
+/* line 98, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  outline-style: none;
+  margin-left: -23px;
+  margin-top: -5px;
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -38px;
+  background-repeat: no-repeat;
+  height: 46px;
+  width: 46px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.ui-slider .ui-slider-handle:active {
+  background-position: 0 -84px;
+}
+/* line 108, ../../app/styles/_base.scss */
+.ui-slider .value {
+  top: 46px;
+  font-family: "PT Sans Regular";
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+/* line 116, ../../app/styles/_base.scss */
+.ui-slider .min {
+  left: 0px;
+}
+/* line 119, ../../app/styles/_base.scss */
+.ui-slider .max {
+  right: 0px;
+}
+/* line 122, ../../app/styles/_base.scss */
+.ui-slider .current {
+  margin-left: -15px;
+}
+
+/* line 9, ../../app/styles/temples_list.scss */
+.button.model {
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -1602px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.model:active {
+  background-position: 0 -1272px;
+}
+/* line 12, ../../app/styles/temples_list.scss */
+.button.plan {
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -1162px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 15, ../../app/styles/temples_list.scss */
+.button.contents {
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -392px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.contents:active {
+  background-position: 0 -502px;
+}
+/* line 18, ../../app/styles/temples_list.scss */
+.button.back {
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -1712px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.back:active {
+  background-position: 0 -942px;
+}
+
+/* line 23, ../../app/styles/temples_list.scss */
+.level1 {
+  top: 0px;
+}
+/* line 28, ../../app/styles/temples_list.scss */
+.level1 .church-plan {
+  left: 192px;
+  top: 360px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: 0 -750px;
+  background-repeat: no-repeat;
+  height: 1139px;
+  width: 1068px;
+}
+/* line 35, ../../app/styles/temples_list.scss */
+.level1 div.church-vasilii {
+  left: 275px;
+  top: 975px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -714px 0;
+  background-repeat: no-repeat;
+  height: 196px;
+  width: 310px;
+}
+/* line 41, ../../app/styles/temples_list.scss */
+.level1 div.church-vasilii .info {
+  left: 68px;
+}
+/* line 45, ../../app/styles/temples_list.scss */
+.level1 div.church-vasilii .panorama {
+  left: 246px;
+}
+/* line 50, ../../app/styles/temples_list.scss */
+.level1 div.north-porklet {
+  left: 663px;
+  top: 1015px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -111px -219px;
+  background-repeat: no-repeat;
+  height: 165px;
+  width: 303px;
+}
+/* line 56, ../../app/styles/temples_list.scss */
+.level1 div.north-porklet .panorama {
+  left: 246px;
+}
+/* line 61, ../../app/styles/temples_list.scss */
+.level1 div.north-underchurch {
+  left: 691px;
+  top: 1125px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -414px -219px;
+  background-repeat: no-repeat;
+  height: 191px;
+  width: 232px;
+}
+/* line 67, ../../app/styles/temples_list.scss */
+.level1 div.north-underchurch .panorama {
+  left: 155px;
+}
+/* line 72, ../../app/styles/temples_list.scss */
+.level1 div.east-gallery {
+  left: 544px;
+  top: 776px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 204px;
+  width: 105px;
+}
+/* line 78, ../../app/styles/temples_list.scss */
+.level1 div.east-gallery .panorama {
+  left: 67px;
+}
+/* line 83, ../../app/styles/temples_list.scss */
+.level1 div.east-underchurch {
+  left: 392px;
+  top: 810px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -337px 0;
+  background-repeat: no-repeat;
+  height: 197px;
+  width: 194px;
+}
+/* line 89, ../../app/styles/temples_list.scss */
+.level1 div.east-underchurch .panorama {
+  left: 121px;
+}
+/* line 94, ../../app/styles/temples_list.scss */
+.level1 div.archeology {
+  left: 611px;
+  top: 772px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -531px 0;
+  background-repeat: no-repeat;
+  height: 219px;
+  width: 183px;
+}
+/* line 100, ../../app/styles/temples_list.scss */
+.level1 div.archeology .panorama {
+  left: 108px;
+}
+/* line 105, ../../app/styles/temples_list.scss */
+.level1 div.south-underchurch-building {
+  left: 668px;
+  top: 660px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -461px -457px;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 312px;
+}
+/* line 111, ../../app/styles/temples_list.scss */
+.level1 div.south-underchurch-building .panorama {
+  left: 246px;
+}
+/* line 116, ../../app/styles/temples_list.scss */
+.level1 div.south-underchurch-prestoli {
+  left: 702px;
+  top: 502px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -105px 0;
+  background-repeat: no-repeat;
+  height: 195px;
+  width: 232px;
+}
+/* line 122, ../../app/styles/temples_list.scss */
+.level1 div.south-underchurch-prestoli .panorama {
+  left: 152px;
+}
+/* line 127, ../../app/styles/temples_list.scss */
+.level1 div.center-underchurch {
+  left: 722px;
+  top: 771px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: 0 -457px;
+  background-repeat: no-repeat;
+  height: 287px;
+  width: 258px;
+}
+/* line 133, ../../app/styles/temples_list.scss */
+.level1 div.center-underchurch .panorama {
+  left: 197px;
+}
+/* line 138, ../../app/styles/temples_list.scss */
+.level1 div.papert {
+  left: 537px;
+  top: 990px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -258px -457px;
+  background-repeat: no-repeat;
+  height: 293px;
+  width: 203px;
+}
+/* line 144, ../../app/styles/temples_list.scss */
+.level1 div.papert .panorama {
+  left: 106px;
+}
+/* line 149, ../../app/styles/temples_list.scss */
+.level1 div.belfry {
+  left: 192px;
+  top: 452px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: -646px -219px;
+  background-repeat: no-repeat;
+  height: 238px;
+  width: 282px;
+}
+/* line 155, ../../app/styles/temples_list.scss */
+.level1 div.belfry .panorama {
+  left: 209px;
+  top: 0px;
+}
+/* line 161, ../../app/styles/temples_list.scss */
+.level1 div.ladder {
+  left: 684px;
+  top: 921px;
+  background-image: url('../images/generated/plans/level1-s145fb1c199.png');
+  background-position: 0 -219px;
+  background-repeat: no-repeat;
+  height: 135px;
+  width: 111px;
+}
+/* line 167, ../../app/styles/temples_list.scss */
+.level1 div.ladder .panorama {
+  left: 57px;
+}
+/* line 172, ../../app/styles/temples_list.scss */
+.level1 ul {
+  width: 600px;
+}
+/* line 175, ../../app/styles/temples_list.scss */
+.level1 ul li {
+  line-height: 117%;
+}
+/* line 179, ../../app/styles/temples_list.scss */
+.level1 ul.church-list-1 {
+  left: 104px;
+  top: 1506px;
+}
+/* line 184, ../../app/styles/temples_list.scss */
+.level1 ul.church-list-2 {
+  left: 778px;
+  top: 1545px;
+}
+
+/* line 191, ../../app/styles/temples_list.scss */
+.level2 {
+  top: 2048px;
+}
+/* line 196, ../../app/styles/temples_list.scss */
+.level2 .church-plan {
+  left: 355px;
+  top: 330px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: 0 -2042px;
+  background-repeat: no-repeat;
+  height: 1136px;
+  width: 873px;
+}
+/* line 203, ../../app/styles/temples_list.scss */
+.level2 div.pokrova {
+  left: 590px;
+  top: 721px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: 0 -381px;
+  background-repeat: no-repeat;
+  height: 321px;
+  width: 374px;
+}
+/* line 209, ../../app/styles/temples_list.scss */
+.level2 div.pokrova .info {
+  left: 80px;
+  top: 0px;
+}
+/* line 214, ../../app/styles/temples_list.scss */
+.level2 div.pokrova .panorama {
+  left: 290px;
+  top: 0px;
+}
+/* line 220, ../../app/styles/temples_list.scss */
+.level2 div.kipriana {
+  left: 666px;
+  top: 1085px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 203px;
+}
+/* line 226, ../../app/styles/temples_list.scss */
+.level2 div.kipriana .info {
+  left: 0px;
+}
+/* line 230, ../../app/styles/temples_list.scss */
+.level2 div.kipriana .panorama {
+  left: 120px;
+}
+/* line 235, ../../app/styles/temples_list.scss */
+.level2 div.jerusalem {
+  left: 1003px;
+  top: 788px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: -535px -186px;
+  background-repeat: no-repeat;
+  height: 195px;
+  width: 200px;
+}
+/* line 241, ../../app/styles/temples_list.scss */
+.level2 div.jerusalem .info {
+  left: 0px;
+}
+/* line 245, ../../app/styles/temples_list.scss */
+.level2 div.jerusalem .panorama {
+  left: 130px;
+}
+/* line 250, ../../app/styles/temples_list.scss */
+.level2 div.troitsa {
+  left: 376px;
+  top: 786px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: -410px 0;
+  background-repeat: no-repeat;
+  height: 185px;
+  width: 187px;
+}
+/* line 256, ../../app/styles/temples_list.scss */
+.level2 div.troitsa .info {
+  left: 0px;
+}
+/* line 260, ../../app/styles/temples_list.scss */
+.level2 div.troitsa .panorama {
+  left: 120px;
+}
+/* line 265, ../../app/styles/temples_list.scss */
+.level2 div.patriarhi {
+  left: 517px;
+  top: 973px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: -170px -186px;
+  background-repeat: no-repeat;
+  height: 153px;
+  width: 164px;
+}
+/* line 271, ../../app/styles/temples_list.scss */
+.level2 div.patriarhi .info {
+  left: -29px;
+}
+/* line 275, ../../app/styles/temples_list.scss */
+.level2 div.patriarhi .panorama {
+  left: 103px;
+}
+/* line 280, ../../app/styles/temples_list.scss */
+.level2 div.nikola {
+  left: 661px;
+  top: 495px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: -203px 0;
+  background-repeat: no-repeat;
+  height: 185px;
+  width: 207px;
+}
+/* line 286, ../../app/styles/temples_list.scss */
+.level2 div.nikola .info {
+  left: -10px;
+}
+/* line 290, ../../app/styles/temples_list.scss */
+.level2 div.nikola .panorama {
+  left: 150px;
+}
+/* line 295, ../../app/styles/temples_list.scss */
+.level2 div.grigory {
+  left: 872px;
+  top: 962px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: -597px 0;
+  background-repeat: no-repeat;
+  height: 186px;
+  width: 186px;
+}
+/* line 301, ../../app/styles/temples_list.scss */
+.level2 div.grigory .info {
+  left: 13px;
+  top: 16px;
+}
+/* line 306, ../../app/styles/temples_list.scss */
+.level2 div.grigory .panorama {
+  left: 135px;
+}
+/* line 311, ../../app/styles/temples_list.scss */
+.level2 div.svirski {
+  left: 517px;
+  top: 637px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: -374px -381px;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 156px;
+}
+/* line 317, ../../app/styles/temples_list.scss */
+.level2 div.svirski .info {
+  left: -29px;
+}
+/* line 321, ../../app/styles/temples_list.scss */
+.level2 div.svirski .panorama {
+  left: 96px;
+}
+/* line 326, ../../app/styles/temples_list.scss */
+.level2 div.varlaam {
+  left: 863px;
+  top: 624px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: -334px -186px;
+  background-repeat: no-repeat;
+  height: 179px;
+  width: 201px;
+}
+/* line 332, ../../app/styles/temples_list.scss */
+.level2 div.varlaam .info {
+  left: -23px;
+}
+/* line 336, ../../app/styles/temples_list.scss */
+.level2 div.varlaam .panorama {
+  left: 140px;
+}
+/* line 341, ../../app/styles/temples_list.scss */
+.level2 div.inner-gallery {
+  left: 479px;
+  top: 603px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: 0 -702px;
+  background-repeat: no-repeat;
+  height: 527px;
+  width: 605px;
+}
+/* line 347, ../../app/styles/temples_list.scss */
+.level2 div.inner-gallery .panorama {
+  left: 370px;
+}
+/* line 352, ../../app/styles/temples_list.scss */
+.level2 div.outer-gallery {
+  left: 355px;
+  top: 475px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: 0 -1229px;
+  background-repeat: no-repeat;
+  height: 813px;
+  width: 873px;
+}
+/* line 358, ../../app/styles/temples_list.scss */
+.level2 div.outer-gallery .panorama {
+  left: 756px;
+  top: 10px;
+}
+/* line 364, ../../app/styles/temples_list.scss */
+.level2 div.exit {
+  left: 1014px;
+  top: 1315px;
+  background-image: url('../images/generated/plans/level2-s243599e4c6.png');
+  background-position: 0 -186px;
+  background-repeat: no-repeat;
+  height: 152px;
+  width: 170px;
+}
+/* line 370, ../../app/styles/temples_list.scss */
+.level2 div.exit .panorama {
+  left: 103px;
+}
+/* line 375, ../../app/styles/temples_list.scss */
+.level2 ul {
+  top: 1548px;
+}
+/* line 378, ../../app/styles/temples_list.scss */
+.level2 ul li {
+  line-height: 175%;
+}
+/* line 382, ../../app/styles/temples_list.scss */
+.level2 ul.church-list-1 {
+  left: 104px;
+  width: 672px;
+}
+/* line 388, ../../app/styles/temples_list.scss */
+.level2 ul.church-list-2 {
+  left: 810px;
+  width: 560px;
+}
+
+/* line 396, ../../app/styles/temples_list.scss */
+.arrow {
+  left: 1433px;
+  top: 1943px;
+}
+/* line 400, ../../app/styles/temples_list.scss */
+.arrow.up {
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 38px;
+  width: 42px;
+}
+/* line 404, ../../app/styles/temples_list.scss */
+.arrow.down {
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: -42px 0;
+  background-repeat: no-repeat;
+  height: 38px;
+  width: 42px;
+}
+
+/* line 409, ../../app/styles/temples_list.scss */
+.page-content-gray {
+  left: 0px;
+  top: 240px;
+  width: 1536px;
+  height: 1808px;
+  z-index: -1;
+  background-color: #ededee;
+}
+
+/* line 420, ../../app/styles/temples_list.scss */
+div.list {
+  display: none;
+}
+/* line 424, ../../app/styles/temples_list.scss */
+div.list .info {
+  top: -29px;
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -130px;
+  background-repeat: no-repeat;
+  height: 76px;
+  width: 76px;
+}
+/* line 430, ../../app/styles/temples_list.scss */
+div.list .panorama {
+  top: -29px;
+  background-image: url('../images/generated/buttons-s317a563d48.png');
+  background-position: 0 -206px;
+  background-repeat: no-repeat;
+  height: 76px;
+  width: 76px;
+}
+
+/* line 437, ../../app/styles/temples_list.scss */
+ul {
+  font-family: "PT Sans Pro Narrow Demi Regular";
+  font-size: 35px;
+  letter-spacing: 1px;
+  color: #808183;
+}
+/* line 444, ../../app/styles/temples_list.scss */
+ul li {
+  padding-bottom: 11px;
+}
+/* line 447, ../../app/styles/temples_list.scss */
+ul li.active {
+  color: #6c61a7;
+}

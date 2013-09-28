@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CD83F6E17EE250C005EE08D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD83F6D17EE250C005EE08D /* RootViewController.m */; };
+		1CD83F7117EE450B005EE08D /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD83F7017EE450B005EE08D /* Stack.m */; };
 		1CD8AF0F17DF10DD00F7AF5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD8AF0E17DF10DD00F7AF5A /* UIKit.framework */; };
 		1CD8AF1117DF10DD00F7AF5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD8AF1017DF10DD00F7AF5A /* Foundation.framework */; };
 		1CD8AF1317DF10DD00F7AF5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD8AF1217DF10DD00F7AF5A /* CoreGraphics.framework */; };
@@ -21,6 +23,8 @@
 		1CD8AF2F17DF10DD00F7AF5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD8AF1017DF10DD00F7AF5A /* Foundation.framework */; };
 		1CD8AF3717DF10DD00F7AF5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CD8AF3517DF10DD00F7AF5A /* InfoPlist.strings */; };
 		1CD8AF3A17DF10DE00F7AF5A /* PokrovskySoborTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8AF3917DF10DE00F7AF5A /* PokrovskySoborTests.m */; };
+		1CD8AF4417DF419C00F7AF5A /* www in Resources */ = {isa = PBXBuildFile; fileRef = 1CD8AF4317DF419C00F7AF5A /* www */; };
+		1CD8AF4717E0D30F00F7AF5A /* CCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8AF4617E0D30F00F7AF5A /* CCircleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CD83F6C17EE250C005EE08D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1CD83F6D17EE250C005EE08D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1CD83F6F17EE450B005EE08D /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		1CD83F7017EE450B005EE08D /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		1CD8AF0B17DF10DD00F7AF5A /* PokrovskySobor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokrovskySobor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD8AF0E17DF10DD00F7AF5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CD8AF1017DF10DD00F7AF5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +61,9 @@
 		1CD8AF3617DF10DD00F7AF5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1CD8AF3817DF10DE00F7AF5A /* PokrovskySoborTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokrovskySoborTests.h; sourceTree = "<group>"; };
 		1CD8AF3917DF10DE00F7AF5A /* PokrovskySoborTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokrovskySoborTests.m; sourceTree = "<group>"; };
+		1CD8AF4317DF419C00F7AF5A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		1CD8AF4517E0D30F00F7AF5A /* CCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCircleButton.h; sourceTree = "<group>"; };
+		1CD8AF4617E0D30F00F7AF5A /* CCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCircleButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +123,16 @@
 		1CD8AF1417DF10DD00F7AF5A /* PokrovskySobor */ = {
 			isa = PBXGroup;
 			children = (
+				1CD8AF4317DF419C00F7AF5A /* www */,
 				1CD8AF1D17DF10DD00F7AF5A /* AppDelegate.h */,
 				1CD8AF1E17DF10DD00F7AF5A /* AppDelegate.m */,
 				1CD8AF1517DF10DD00F7AF5A /* Supporting Files */,
+				1CD8AF4517E0D30F00F7AF5A /* CCircleButton.h */,
+				1CD8AF4617E0D30F00F7AF5A /* CCircleButton.m */,
+				1CD83F6C17EE250C005EE08D /* RootViewController.h */,
+				1CD83F6D17EE250C005EE08D /* RootViewController.m */,
+				1CD83F6F17EE450B005EE08D /* Stack.h */,
+				1CD83F7017EE450B005EE08D /* Stack.m */,
 			);
 			path = PokrovskySobor;
 			sourceTree = "<group>";
@@ -199,6 +217,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = pbsputnik;
+				TargetAttributes = {
+					1CD8AF0A17DF10DD00F7AF5A = {
+						DevelopmentTeam = VZJ26AAYCG;
+					};
+				};
 			};
 			buildConfigurationList = 1CD8AF0617DF10DD00F7AF5A /* Build configuration list for PBXProject "PokrovskySobor" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -227,6 +250,7 @@
 				1CD8AF2117DF10DD00F7AF5A /* Default.png in Resources */,
 				1CD8AF2317DF10DD00F7AF5A /* Default@2x.png in Resources */,
 				1CD8AF2517DF10DD00F7AF5A /* Default-568h@2x.png in Resources */,
+				1CD8AF4417DF419C00F7AF5A /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +287,9 @@
 			files = (
 				1CD8AF1B17DF10DD00F7AF5A /* main.m in Sources */,
 				1CD8AF1F17DF10DD00F7AF5A /* AppDelegate.m in Sources */,
+				1CD83F6E17EE250C005EE08D /* RootViewController.m in Sources */,
+				1CD83F7117EE450B005EE08D /* Stack.m in Sources */,
+				1CD8AF4717E0D30F00F7AF5A /* CCircleButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +392,18 @@
 		1CD8AF3E17DF10DE00F7AF5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PokrovskySobor/PokrovskySobor-Prefix.pch";
 				INFOPLIST_FILE = "PokrovskySobor/PokrovskySobor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "18A7B689-CA1D-43B0-A62F-FC4713DB81B7";
+				"PROVISIONING_PROFILE[sdk=*]" = "18A7B689-CA1D-43B0-A62F-FC4713DB81B7";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -376,10 +411,16 @@
 		1CD8AF3F17DF10DE00F7AF5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PokrovskySobor/PokrovskySobor-Prefix.pch";
 				INFOPLIST_FILE = "PokrovskySobor/PokrovskySobor-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "18A7B689-CA1D-43B0-A62F-FC4713DB81B7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "18A7B689-CA1D-43B0-A62F-FC4713DB81B7";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -437,6 +478,7 @@
 				1CD8AF3F17DF10DE00F7AF5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CD8AF4017DF10DE00F7AF5A /* Build configuration list for PBXNativeTarget "PokrovskySoborTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +487,7 @@
 				1CD8AF4217DF10DE00F7AF5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
