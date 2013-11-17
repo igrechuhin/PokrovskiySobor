@@ -8,7 +8,8 @@
 
     <action name="playbackgroundsound">
         stopallsounds();
-        if(%1 != null, playsound(backgroundsound, %BASEDIR%/audio/%1));
+        if(get(plugin[data].soundOn),
+            if(%1 != null, playsound(backgroundsound, %BASEDIR%/audio/%1)));
     </action>
 
     <!--************** Plugin map level 1 *****************************************************************-->
@@ -42,7 +43,7 @@
     <plugin keep="true" visible="false" name="mapspot_2_hall_out_7" onclick="mainloadpano(scene_2_hall_out_7);" align="lefttop" edge="center" parent="map_level_2" x="85.4%" y="22.1011%" width="25" height="25"/>
     <plugin keep="true" visible="false" name="mapspot_2_hall_out_6" onclick="mainloadpano(scene_2_hall_out_6);" align="lefttop" edge="center" parent="map_level_2" x="12.7089%" y="37%" width="25" height="25"/>
     <plugin keep="true" visible="false" name="mapspot_2_hall_out_5" onclick="mainloadpano(scene_2_hall_out_5);" align="lefttop" edge="center" parent="map_level_2" x="31.4402%" y="75.7009%" width="25" height="25"/>
-    <plugin keep="true" visible="false" name="mapspot_2_hall_out_3" onclick="mainloadpano(scene_2_hall_out_3);" align="lefttop" edge="center" parent="map_level_2" x="50.1014%" y="82.3988%" width="25" height="25"/>
+    <plugin keep="true" visible="false" name="mapspot_north" onclick="mainloadpano(scene_north);" align="lefttop" edge="center" parent="map_level_2" x="50.1014%" y="82.3988%" width="25" height="25"/>
     <plugin keep="true" visible="false" name="mapspot_2_hall_out_2" onclick="mainloadpano(scene_2_hall_out_2);" align="lefttop" edge="center" parent="map_level_2" x="70.7911%" y="24.9221%" width="25" height="25"/>
     <plugin keep="true" visible="false" name="mapspot_outer_gallery" onclick="mainloadpano(scene_outer_gallery);" align="lefttop" edge="center" parent="map_level_2" x="97.5659%" y="45.4829%" width="25" height="25"/>
     <plugin keep="true" visible="false" name="mapspot_2_hall_in_6" onclick="mainloadpano(scene_2_hall_in_6);" align="lefttop" edge="center" parent="map_level_2" x="21.1521%" y="41.6791%" width="25" height="25"/>
@@ -63,7 +64,7 @@
     <plugin keep="true" visible="false" name="mapspot_pokrovsky_1_07" onclick="mainloadpano(scene_pokrovsky_1_07);" align="lefttop" edge="center" parent="map_level_2" x="31%" y="23%" width="25" height="25"/>
     <plugin keep="true" visible="false" name="mapspot_svirski" onclick="mainloadpano(scene_svirski);" align="lefttop" edge="center" parent="map_level_2" x="31%" y="32.866%" width="25" height="25"/>
     <plugin keep="true" visible="false" name="mapspot_pokrovsky_6_03" onclick="mainloadpano(scene_pokrovsky_6_03);" align="lefttop" edge="center" parent="map_level_2" x="47.5%" y="32.866%" width="25" height="25"/>
-    <plugin keep="true" visible="false" name="mapspot_pokrovsky_4_12_2" onclick="mainloadpano(scene_pokrovsky_4_12_2);" align="lefttop" edge="center" parent="map_level_2" x="47.5%" y="38.866%" width="25" height="25"/>
+    <plugin keep="true" visible="false" name="mapspot_external" onclick="mainloadpano(scene_external);" align="lefttop" edge="center" parent="map_level_2" x="47.5%" y="38.866%" width="25" height="25"/>
 
 
     <plugin name="mapradar_level_2" parent="map_level_2" edge="center" align="lefttop" keep="true" url="map/radar.swf" alturl="map/radar.js" visible="false" width="70" height="70" linecolor="0xe74011" linealpha="0.4" linewidth="2" fillcolor="0xe74011" fillalpha="0.4"
@@ -115,7 +116,7 @@
 		showanimated(mapspot_2_hall_out_7);
 		showanimated(mapspot_2_hall_out_6);
 		showanimated(mapspot_2_hall_out_5);
-		showanimated(mapspot_2_hall_out_3);
+		showanimated(mapspot_north);
 		showanimated(mapspot_2_hall_out_2);
 		showanimated(mapspot_outer_gallery);
 		showanimated(mapspot_2_hall_in_6);
@@ -135,7 +136,7 @@
         showanimated(mapspot_pokrovsky_1_07);
         showanimated(mapspot_svirski);
         showanimated(mapspot_pokrovsky_6_03);
-        showanimated(mapspot_pokrovsky_4_12_2);
+        showanimated(mapspot_external);
 	</action>
 
     <action name="hidemapspots_1">
@@ -162,7 +163,7 @@
 		set(plugin[mapspot_2_hall_out_7].visible,false);
 		set(plugin[mapspot_2_hall_out_6].visible,false);
 		set(plugin[mapspot_2_hall_out_5].visible,false);
-		set(plugin[mapspot_2_hall_out_3].visible,false);
+		set(plugin[mapspot_north].visible,false);
 		set(plugin[mapspot_2_hall_out_2].visible,false);
 		set(plugin[mapspot_outer_gallery].visible,false);
 		set(plugin[mapspot_2_hall_in_6].visible,false);
@@ -182,7 +183,7 @@
         set(plugin[mapspot_pokrovsky_1_07].visible,false);
         set(plugin[mapspot_svirski].visible,false);
         set(plugin[mapspot_pokrovsky_6_03].visible,false);
-        set(plugin[mapspot_pokrovsky_4_12_2].visible,false);
+        set(plugin[mapspot_external].visible,false);
 	</action>
 
     <action name="unselectmapspots">
@@ -208,7 +209,7 @@
         set(plugin[mapspot_2_hall_out_7].url, get(plugin[data].mapurl));
         set(plugin[mapspot_2_hall_out_6].url, get(plugin[data].mapurl));
         set(plugin[mapspot_2_hall_out_5].url, get(plugin[data].mapurl));
-        set(plugin[mapspot_2_hall_out_3].url, get(plugin[data].mapurl));
+        set(plugin[mapspot_north].url, get(plugin[data].mapurl));
         set(plugin[mapspot_2_hall_out_2].url, get(plugin[data].mapurl));
         set(plugin[mapspot_outer_gallery].url, get(plugin[data].mapurl));
         set(plugin[mapspot_2_hall_in_6].url, get(plugin[data].mapurl));
@@ -228,7 +229,7 @@
         set(plugin[mapspot_pokrovsky_1_07].url, get(plugin[data].mapurl));
         set(plugin[mapspot_svirski].url, get(plugin[data].mapurl));
         set(plugin[mapspot_pokrovsky_6_03].url, get(plugin[data].mapurl));
-        set(plugin[mapspot_pokrovsky_4_12_2].url, get(plugin[data].mapurl));
+        set(plugin[mapspot_external].url, get(plugin[data].mapurl));
     </action>
     <!-- close the map -->
     <action name="closemap_1">
@@ -903,7 +904,7 @@
 
 		<!-- place your scene hotspots here -->
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-112.876" atv="-1.006" linkedscene="scene_2_hall_in_3" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="114.588" atv="-2.210" linkedscene="scene_2_hall_out_3" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="114.588" atv="-2.210" linkedscene="scene_north" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="44.501" atv="-2.127" linkedscene="scene_exit" />
 
 	</scene>
@@ -1087,11 +1088,11 @@
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="-135.596" atv="-1.639" linkedscene="scene_troitsa" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="-45.373" atv="10.993" linkedscene="scene_2_hall_out_6" />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="71.537" atv="2.556" linkedscene="scene_svirski" />
-		<hotspot name="spot5" style="skin_hotspotstyle" ath="111.378" atv="-4.859" linkedscene="scene_pokrovsky_4_12_2" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="111.378" atv="-4.859" linkedscene="scene_external" />
 
 	</scene>
 
-	<scene name="scene_outer_gallery" title="Западный участок внешней обходной галереи" onstart="" thumburl="panos/2_hall_out_1.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_outer_gallery" title="Западная внешняя обходная галерея" onstart="" thumburl="panos/2_hall_out_1.tiles/thumb.jpg" lat="" lng="" heading="">
 		<events onxmlcomplete="onxmlcompleteaction_2(mapspot_outer_gallery, 53.23);"/>
 
 		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="20" fovmax="140" limitview="range" />
@@ -1148,8 +1149,8 @@
 
 	</scene>
 
-	<scene name="scene_2_hall_out_3" title="2_hall_out_3" onstart="" thumburl="panos/2_hall_out_3.tiles/thumb.jpg" lat="" lng="" heading="">
-		<events onxmlcomplete="onxmlcompleteaction_2(mapspot_2_hall_out_3, 175.82);"/>
+	<scene name="scene_north" title="Северная внешняя обходная галерея" onstart="" thumburl="panos/2_hall_out_3.tiles/thumb.jpg" lat="" lng="" heading="">
+		<events onxmlcomplete="onxmlcompleteaction_2(mapspot_north, 175.82);"/>
 
 		<view hlookat="237.378" vlookat="9.052" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="20" fovmax="140" limitview="range" />
 
@@ -1200,7 +1201,7 @@
 
 		<!-- place your scene hotspots here -->
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="55.248" atv="-3.586" linkedscene="scene_2_hall_in_3" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="138.756" atv="0.079" linkedscene="scene_2_hall_out_3" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="138.756" atv="0.079" linkedscene="scene_north" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="15.862" atv="-1.243" linkedscene="scene_patriarhi" />
 
 	</scene>
@@ -1464,8 +1465,8 @@
 
     </scene>
 
-    <scene name="scene_pokrovsky_4_12_2" title="pokrovsky_4_12_2" onstart="" thumburl="panos/pokrovsky_4_12_2.tiles/thumb.jpg" lat="" lng="" heading="">
-        <events onxmlcomplete="onxmlcompleteaction_2(mapspot_pokrovsky_4_12_2, 65.96, 32.mp3);"/>
+    <scene name="scene_external" title="Верхняя галерея вокруг Церкви Покрова Богородицы" onstart="" thumburl="panos/pokrovsky_4_12_2.tiles/thumb.jpg" lat="" lng="" heading="">
+        <events onxmlcomplete="onxmlcompleteaction_2(mapspot_external, 65.96, 32.mp3);"/>
 
         <view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="20" fovmax="140" limitview="range" />
 

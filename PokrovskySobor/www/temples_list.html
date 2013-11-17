@@ -2,28 +2,23 @@
 <html>
     <head>
         <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-                <meta name="viewport" content="width=device-width, user-scalable=no">
-                    <link rel="stylesheet" href="styles/temples_list.css">
-                        </head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="styles/temples_list.css">
+    </head>
     <body>
-        <div class="page level1">
-            <div class="page-header"><span class="color-gray"><span class="underline">Храмы Покровского собора</span> / </span><span class="underline">Первый ярус</span></div>
-            
-            <div class="button model"></div>
-            <div class="button plan"></div>
-            <div class="button contents"></div>
-            <div class="button back"></div>
-            
-            <div class="arrow down"></div>
-            
+        <div id="level1" class="page">
             <div class="page-content-gray"></div>
-            
+
             <div class="page-hint color-gray">Дотроньтесь, чтобы увидеть название храма</div>
-            
+
+            <div class="hint-box bonus-hint"></div>
+
+            <div class="page-hint right bonus-hint color-gray">вас туда никогда не пустят, так что смотрите здесь :)</div>
+
             <div class="church-plan"></div>
             <div class="list church-vasilii">
-                <div class="info" data-destination="temple_church_vasilii"></div>
+                <div class="info" data-destination="temple_vasilii"></div>
                 <div class="panorama" data-destination="scene_church_vasilii"></div>
             </div>
             <div class="list north-porklet">
@@ -59,39 +54,36 @@
             <div class="list ladder">
                 <div class="panorama" data-destination="scene_ladder"></div>
             </div>
-            
+
             <ul class="church-list-1">
                 <li class="church-vasilii">Церковь Святого Василия Блаженного</li>
-                <li class="north-porklet">Северный подклет. «Московские юродивые в истории Покровского собора»</li>
-                <li class="north-underchurch">Северное подцерковье. «Иконография образа святого Василия Блаженного»</li>
+                <li class="north-porklet">Северный подклет «Московские юродивые в истории Покровского собора»</li>
+                <li class="north-underchurch">Северное подцерковье «Иконография образа святого Василия Блаженного»</li>
                 <li class="east-gallery">Восточная галерея</li>
-                <li class="east-underchurch">Восточное подцерковье. «Росписи восточного подцерковья»</li>
+                <li class="east-underchurch">Восточное подцерковье<br>«Росписи восточного подцерковья»</li>
                 <li class="archeology">«Археологические раскопки на территории Покровского собора»</li>
             </ul>
             <ul class="church-list-2">
-                <li class="south-underchurch-building">Южный подклет. «Строительство Покровского собора»</li>
-                <li class="south-underchurch-prestoli">Южное подцерковье.<br>«Престолы Покровского собора»</li>
-                <li class="center-underchurch">Подклет центральной церкви.<br>«Реставрация Покровского собора»</li>
+                <li class="south-underchurch-building">Южный подклет «Строительство Покровского собора»</li>
+                <li class="south-underchurch-prestoli">Южное подцерковье<br>«Престолы Покровского собора»</li>
+                <li class="center-underchurch">Подклет центральной церкви<br>«Реставрация Покровского собора»</li>
                 <li class="papert">Помещение паперти</li>
-                <li class="belfry">Колокольня</li>
+                <li class="bonus belfry">Колокольня</li>
                 <li class="ladder">Внутренняя лестница на 2-й ярус собора</li>
             </ul>
+
+            <div class="navigation"></div>
         </div>
-        
-        <div class="page level2">
-            <div class="page-header"><span class="color-gray"><span class="underline">Храмы Покровского собора</span> / </span><span class="underline">Второй ярус</span></div>
-            
-            <div class="button model"></div>
-            <div class="button plan"></div>
-            <div class="button contents"></div>
-            <div class="button back"></div>
-            
-            <div class="arrow up"></div>
-            
+
+        <div id="level2" class="page">
             <div class="page-content-gray"></div>
-            
+
             <div class="page-hint color-gray">Дотроньтесь, чтобы увидеть название храма</div>
-            
+
+            <div class="hint-box bonus-hint"></div>
+
+            <div class="page-hint right bonus-hint color-gray">вас туда никогда не пустят, так что смотрите здесь :)</div>
+
             <div class="church-plan"></div>
             <div class="list pokrova">
                 <div class="info" data-destination="temple_pokrova"></div>
@@ -135,10 +127,19 @@
             <div class="list outer-gallery">
                 <div class="panorama" data-destination="scene_outer_gallery"></div>
             </div>
+            <div class="list external">
+                <div class="panorama" data-destination="scene_external"></div>
+            </div>
+            <div class="list north">
+                <div class="panorama" data-destination="scene_north"></div>
+            </div>
+            <div class="list west">
+                <div class="panorama" data-destination="scene_outer_gallery"></div>
+            </div>
             <div class="list exit">
                 <div class="panorama" data-destination="scene_exit"></div>
             </div>
-            
+
             <ul class="church-list-1">
                 <li class="pokrova">Церковь Покрова Пресвятой Богородицы</li>
                 <li class="kipriana">Церковь Киприана и Устины</li>
@@ -146,17 +147,34 @@
                 <li class="troitsa">Церковь Святой Троицы</li>
                 <li class="patriarhi">Церковь Трёх Патриархов Константинопольских</li>
                 <li class="nikola">Церковь Николы Великорецкого</li>
-            </ul>
-            <ul class="church-list-2">
                 <li class="grigory">Церковь Григория Армянского</li>
                 <li class="svirski">Церковь Александра Свирского</li>
                 <li class="varlaam">Церковь Варлаама Хутынского</li>
+            </ul>
+            <ul class="church-list-2">
                 <li class="inner-gallery">Внутренняя обходная галерея</li>
                 <li class="outer-gallery">Внешняя обходная галерея</li>
+                <li class="bonus external">Верхняя галерея вокруг<br>Церкви Покрова Богородицы</li>
+                <li class="bonus north">Северная внешняя обходная галерея</li>
+                <li class="bonus west">Западная внешняя обходная галерея</li>
                 <li class="exit">Выход</li>
             </ul>
         </div>
-        
+
+        <div class="page-header" data-nav1="<span class='color-gray'><span class='underline'>Храмы Покровского собора</span> / </span><span class='underline'>Первый ярус</span>" data-nav2="<span class='color-gray'><span class='underline'>Храмы Покровского собора</span> / </span><span class='underline'>Второй ярус</span>">
+            <span class="color-gray"><span class="underline">Храмы Покровского собора</span> / </span><span class="underline">Первый ярус</span>
+        </div>
+
+        <div class="button model"></div>
+        <div class="button plan"></div>
+        <div class="button contents"></div>
+        <div class="button back"></div>
+
+        <div class="navigation">
+            <div id="nav1" data-page="0" class="active"></div>
+            <div id="nav2" data-page="1"></div>
+        </div>
+
         <script src="scripts/fastclick.min.js"></script>
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/temples_list.js"></script>

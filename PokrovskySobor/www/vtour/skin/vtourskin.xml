@@ -85,6 +85,7 @@
 		<layer name="skin_btn_ou"     style="skin_base|skin_glow" crop="64|320|64|64" align="bottom"      x="+100" y="4"   scale="0.5" ondown2="set(fov_moveforce,+1);"     onup2="set(fov_moveforce,0);" />
 		<layer name="skin_btn_gyro"   style="skin_base|skin_glow" crop="0|384|64|64"  align="bottom"      x="140"  y="4"   scale="0.5" ondown2="skin_showmap(false);" onclick="switch(plugin[skin_gyro].enabled);" visible="false" devices="html5" />
 		<layer name="skin_btn_fs"     style="skin_base|skin_glow" crop="0|576|64|64"  align="bottom"      x="140"  y="4"   scale="0.5" onclick="switch(fullscreen);" devices="fullscreensupport" />
+		<layer name="skin_btn_audio"     style="skin_base|skin_glow" crop="0|647|64|64"  align="bottom"      x="190"  y="4"   scale="0.5" onclick="audio_switch()"/>
 		<layer name="skin_btn_hide"   style="skin_base|skin_glow" crop="0|448|64|64"  align="right"       x="50"   y="0"   scale="0.5" onclick="skin_hideskin()" />
 		<layer name="skin_btn_show"   style="skin_base|skin_glow" crop="64|448|64|64" align="right"       x="5"    y="-36" scale="0.5" alpha="0" visible="false" onclick="skin_showskin()" />
 	</layer>
@@ -148,6 +149,7 @@
 			<layer name="skin_btn_ou"     visible="false" />
 			<layer name="skin_btn_gyro"   scale="1" y="0" align="left" x="320" />
 			<layer name="skin_btn_fs"     scale="1" y="0" align="left" x="320" />
+			<layer name="skin_btn_audio"  visible="false" />
 			<layer name="skin_btn_hide"   scale="1" x="5" />
 			<layer name="skin_btn_show"   scale="1" x="0" y="-58" />
 		</layer>
@@ -324,6 +326,7 @@
 			set(layer[skin_btn_gyro].visible, %1);
 			set(layer[skin_btn_fs].visible, %1);
 		  );
+		set(layer[skin_btn_audio].visible, %1);
 	</action>
 
 	<action name="skin_updatescroll">
@@ -523,6 +526,16 @@
 			  );
 			set(events[skin_events].onmouseup, null);
 		  );
+	</action>
+
+	<action name="audio_switch">
+		if(get(plugin[data].soundOn),
+			stopallsounds();
+			set(plugin[data].soundOn,false);
+			set(layer[skin_btn_audio].crop, '64|647|64|64');,
+			set(plugin[data].soundOn,true);
+			set(layer[skin_btn_audio].crop, '0|647|64|64');
+		);
 	</action>
 
 </krpano>

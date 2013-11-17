@@ -131,23 +131,55 @@ $(function () {
     });
 });
 
-$('.button.text').on('click', function () {
-    window.open('scroll://info.html/down');
-});
-
-$('.button.infographics').on('click', function () {
-    window.open('scroll://info.html/up');
-});
-
 $('.button.plan').on('click', function () {
-    window.open('open://info.html/temples_list');
+                     window.open('open://info.html/temples_list');
 });
 
 $('.button.contents').on('click', function () {
-    window.open('open://info.html/contents');
+                         window.open('open://info.html/contents');
 });
 
 $('.button.back').on('click', function () {
     window.open('back://info.html/dummy');
 });
 
+$('.link').on('click', function (event) {
+              window.open($(event.target).data('url'));
+});
+
+$(function() {
+    'use strict';
+    var $navigation = $('.navigation'),
+        $dots = $navigation.children(),
+
+        $pageHeader = $('.page-header');
+
+    $navigation.on('click', function (event) {
+        var $target = $(event.target),
+            id = $target.attr('id'),
+            page = $target.data('page');
+
+        window.open('page://info.html/' + page);
+
+        $dots.removeClass('active');
+        $target.addClass('active');
+
+        $pageHeader.html($pageHeader.data(id));
+    });
+});
+
+
+function scrollToPage(page)
+{
+    $(window).scrollTop(0);
+    
+    var $navigation = $('.navigation'),
+    $dots = $navigation.children(),
+    $pageHeader = $('.page-header'),
+    id = 'nav' + page;
+    
+    $dots.removeClass('active');
+    $('#'+id).addClass('active');
+    
+    $pageHeader.html($pageHeader.data(id));
+}

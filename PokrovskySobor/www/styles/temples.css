@@ -1,0 +1,1023 @@
+/* line 17, ../../app/styles/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    width: 1536px;
+    height: 2048px;
+}
+
+/* line 22, ../../app/styles/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../app/styles/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../app/styles/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../app/styles/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../app/styles/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../app/styles/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../app/styles/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../app/styles/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Regular';
+  src: url("fonts/ptn57f-webfont.eot");
+  src: url("fonts/ptn57f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn57f-webfont.woff") format("woff"), url("fonts/ptn57f-webfont.ttf") format("truetype"), url("fonts/ptn57f-webfont.svg#pt_sans_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Bold';
+  src: url("fonts/ptn77f-webfont.eot");
+  src: url("fonts/ptn77f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn77f-webfont.woff") format("woff"), url("fonts/ptn77f-webfont.ttf") format("truetype"), url("fonts/ptn77f-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Demi Regular';
+  src: url("fonts/ptn67-webfont.eot");
+  src: url("fonts/ptn67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn67-webfont.woff") format("woff"), url("fonts/ptn67-webfont.ttf") format("truetype"), url("fonts/ptn67-webfont.svg#pt_sans_pro_narrow_demiRg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Regular';
+  src: url("fonts/ptz55f-webfont.eot");
+  src: url("fonts/ptz55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz55f-webfont.woff") format("woff"), url("fonts/ptz55f-webfont.ttf") format("truetype"), url("fonts/ptz55f-webfont.svg#pt_serif_captionregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Extra Bold Regular';
+  src: url("fonts/pts85-webfont.eot");
+  src: url("fonts/pts85-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts85-webfont.woff") format("woff"), url("fonts/pts85-webfont.ttf") format("truetype"), url("fonts/pts85-webfont.svg#pt_sans_pro_extra_boldregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Italic';
+  src: url("fonts/ptz56f-webfont.eot");
+  src: url("fonts/ptz56f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz56f-webfont.woff") format("woff"), url("fonts/ptz56f-webfont.ttf") format("truetype"), url("fonts/ptz56f-webfont.svg#pt_serif_captionitalic") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Demi Regular';
+  src: url("fonts/pts67-webfont.eot");
+  src: url("fonts/pts67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts67-webfont.woff") format("woff"), url("fonts/pts67-webfont.ttf") format("truetype"), url("fonts/pts67-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Light Regular';
+  src: url("fonts/ptn47-webfont.eot");
+  src: url("fonts/ptn47-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn47-webfont.woff") format("woff"), url("fonts/ptn47-webfont.ttf") format("truetype"), url("fonts/ptn47-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Regular';
+  src: url("fonts/ptf55f-webfont.eot");
+  src: url("fonts/ptf55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf55f-webfont.woff") format("woff"), url("fonts/ptf55f-webfont.ttf") format("truetype"), url("fonts/ptf55f-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Caption Regular';
+  src: url("fonts/ptc55f-webfont.eot");
+  src: url("fonts/ptc55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptc55f-webfont.woff") format("woff"), url("fonts/ptc55f-webfont.ttf") format("truetype"), url("fonts/ptc55f-webfont.svg#pt_sans_captionregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Extra Bold Regular';
+  src: url("fonts/ptn87-webfont.eot");
+  src: url("fonts/ptn87-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn87-webfont.woff") format("woff"), url("fonts/ptn87-webfont.ttf") format("truetype"), url("fonts/ptn87-webfont.svg#pt_sans_pro_narrow_extra_boRg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url("fonts/pts55f-webfont.eot");
+  src: url("fonts/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts55f-webfont.woff") format("woff"), url("fonts/pts55f-webfont.ttf") format("truetype"), url("fonts/pts55f-webfont.svg#pt_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Light';
+  src: url("fonts/pts47-webfont.eot");
+  src: url("fonts/pts47-webfont.eot") format("embedded-opentype"), url("fonts/pts47-webfont.woff") format("woff"), url("fonts/pts47-webfont.ttf") format("truetype"), url("fonts/pts47-webfont.svg#PTSansProCondensedLight") format("svg");
+}
+
+/* line 26, ../../app/styles/_base.scss */
+div, ul {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* line 32, ../../app/styles/_base.scss */
+.page {
+  left: 0px;
+  top: 0px;
+  width: 1536px;
+  height: 2048px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level1 {
+  left: 0px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level2 {
+  left: 1536px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level3 {
+  left: 3072px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level4 {
+  left: 4608px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level5 {
+  left: 6144px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level6 {
+  left: 7680px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level7 {
+  left: 9216px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level8 {
+  left: 10752px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level9 {
+  left: 12288px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level10 {
+  left: 13824px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level11 {
+  left: 15360px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level12 {
+  left: 16896px;
+}
+
+/* line 47, ../../app/styles/_base.scss */
+.page-header {
+  left: 104px;
+  top: 57px;
+  position: fixed;
+  font-family: "PT Sans Pro Condensed Demi Regular";
+  font-size: 45px;
+  letter-spacing: 1px;
+  line-height: 120%;
+}
+
+/* line 59, ../../app/styles/_base.scss */
+.color-gray {
+  color: #808183;
+}
+
+/* line 63, ../../app/styles/_base.scss */
+.underline {
+  border-bottom: 1px solid;
+}
+
+/* line 67, ../../app/styles/_base.scss */
+.red-line {
+  padding-left: 40px;
+}
+
+/* line 71, ../../app/styles/_base.scss */
+.button {
+  top: 52px;
+  position: fixed;
+}
+/* line 76, ../../app/styles/_base.scss */
+.button.audio, .button.text {
+  left: 859px;
+}
+/* line 79, ../../app/styles/_base.scss */
+.button.model, .button.infographics, .button.panorama {
+  left: 988px;
+}
+/* line 82, ../../app/styles/_base.scss */
+.button.plan {
+  left: 1117px;
+}
+/* line 85, ../../app/styles/_base.scss */
+.button.contents {
+  left: 1245px;
+}
+/* line 88, ../../app/styles/_base.scss */
+.button.back {
+  left: 1374px;
+}
+/* line 92, ../../app/styles/_base.scss */
+.button.hint {
+  left: 1374px;
+}
+
+/* line 97, ../../app/styles/_base.scss */
+.page-hint {
+  left: 104px;
+  top: 272px;
+  font-family: "PT Sans Regular";
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+/* line 105, ../../app/styles/_base.scss */
+.page-hint.right {
+  left: 854px;
+}
+
+/* line 110, ../../app/styles/_base.scss */
+.page-content-gray {
+  left: 0px;
+  top: 240px;
+  width: 1536px;
+  height: 1808px;
+  z-index: -1;
+  background-color: #ededee;
+}
+
+/* line 121, ../../app/styles/_base.scss */
+.hint-box {
+  left: 778px;
+  top: 264px;
+  width: 45px;
+  height: 45px;
+  background: #63c6ef;
+}
+
+/* line 130, ../../app/styles/_base.scss */
+.ui-slider {
+  background: white;
+  -moz-border-radius-topleft: 15px;
+  -webkit-border-top-left-radius: 15px;
+  border-top-left-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: solid;
+  border-width: 1px;
+  border-color: #808183;
+  background: #ededee;
+}
+/* line 142, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-range {
+  top: 0px;
+  height: 100%;
+  -moz-border-radius-topleft: 13px;
+  -webkit-border-top-left-radius: 13px;
+  border-top-left-radius: 13px;
+  -moz-border-radius-bottomleft: 13px;
+  -webkit-border-bottom-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  background: #6c61a7;
+}
+/* line 152, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  outline-style: none;
+  margin-left: -22px;
+  margin-top: -5px;
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -84px;
+  background-repeat: no-repeat;
+  height: 46px;
+  width: 46px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.ui-slider .ui-slider-handle:active {
+  background-position: 0 -38px;
+}
+/* line 162, ../../app/styles/_base.scss */
+.ui-slider .value {
+  top: 46px;
+  font-family: "PT Sans Regular";
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+/* line 170, ../../app/styles/_base.scss */
+.ui-slider .min {
+  left: 0px;
+}
+/* line 173, ../../app/styles/_base.scss */
+.ui-slider .max {
+  right: 0px;
+}
+/* line 176, ../../app/styles/_base.scss */
+.ui-slider .current {
+  margin-left: -15px;
+}
+
+/* line 181, ../../app/styles/_base.scss */
+.navigation {
+  top: 1983px;
+  position: fixed;
+}
+/* line 185, ../../app/styles/_base.scss */
+.navigation div {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: white;
+}
+/* line 192, ../../app/styles/_base.scss */
+.navigation div.active {
+  background: #63c6ef;
+}
+
+/* line 7, ../../app/styles/temples.scss */
+.button.panorama {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -1788px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.panorama:active {
+  background-position: 0 -1678px;
+}
+/* line 10, ../../app/styles/temples.scss */
+.button.plan {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -1348px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.plan:active {
+  background-position: 0 -1458px;
+}
+/* line 13, ../../app/styles/temples.scss */
+.button.contents {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -688px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.contents:active {
+  background-position: 0 -798px;
+}
+/* line 16, ../../app/styles/temples.scss */
+.button.back {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -468px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.back:active {
+  background-position: 0 -358px;
+}
+
+/* line 21, ../../app/styles/temples.scss */
+#images {
+  left: 104px;
+  top: 240px;
+  height: 654px;
+  width: 654px;
+}
+/* line 28, ../../app/styles/temples.scss */
+#images.vasilii {
+  background-image: url('../images/temples/Vasiliya_Blajennogo_kupol.png?1382002771');
+}
+/* line 32, ../../app/styles/temples.scss */
+#images.svirski {
+  background-image: url('../images/temples/Svirskogo_kupol.png?1382003444');
+}
+/* line 36, ../../app/styles/temples.scss */
+#images.varlaam {
+  background-image: url('../images/temples/Hutynskogo_kupol.png?1382003686');
+}
+/* line 40, ../../app/styles/temples.scss */
+#images.jerusalem {
+  background-image: url('../images/temples/Vhoda_Gospodnya_kupol.png?1382004753');
+}
+/* line 44, ../../app/styles/temples.scss */
+#images.grigory {
+  background-image: url('../images/temples/Grigoriya_Armyanskogo_kupol.png?1382013594');
+}
+/* line 48, ../../app/styles/temples.scss */
+#images.kipriana {
+  background-image: url('../images/temples/Kipriana_i_Ustiny_kupol.png?1382004435');
+}
+/* line 52, ../../app/styles/temples.scss */
+#images.nikola {
+  background-image: url('../images/temples/Nikoly_Velikoreckogo_kupol.png?1382004544');
+}
+/* line 56, ../../app/styles/temples.scss */
+#images.pokrova {
+  background-image: url('../images/temples/Pokrova_kupol.png?1382003880');
+}
+/* line 60, ../../app/styles/temples.scss */
+#images.troitsa {
+  background-image: url('../images/temples/Sv_Troicy_kupol.png?1382004651');
+}
+/* line 64, ../../app/styles/temples.scss */
+#images.patriarhi {
+  background-image: url('../images/temples/Treh_Patriarhov_kupol.png?1382005458');
+}
+
+/* line 69, ../../app/styles/temples.scss */
+#points {
+  left: 853px;
+  top: 240px;
+}
+/* line 73, ../../app/styles/temples.scss */
+#points .plan {
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: 0 -402px;
+  background-repeat: no-repeat;
+  height: 655px;
+  width: 504px;
+}
+/* line 77, ../../app/styles/temples.scss */
+#points.vasilii {
+  top: 268px;
+}
+/* line 80, ../../app/styles/temples.scss */
+#points.vasilii .plan {
+  background-image: url('../images/generated/plans/level1_small-s226e0f648f.png');
+  background-position: 0 -103px;
+  background-repeat: no-repeat;
+  height: 599px;
+  width: 562px;
+}
+/* line 83, ../../app/styles/temples.scss */
+#points.vasilii .temple {
+  left: 44px;
+  top: 323px;
+  background-image: url('../images/generated/plans/level1_small-s226e0f648f.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 103px;
+  width: 163px;
+}
+/* line 91, ../../app/styles/temples.scss */
+#points.svirski .temple {
+  left: 93px;
+  top: 177px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: -216px -217px;
+  background-repeat: no-repeat;
+  height: 87px;
+  width: 90px;
+}
+/* line 99, ../../app/styles/temples.scss */
+#points.varlaam .temple {
+  left: 293px;
+  top: 169px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: -95px -113px;
+  background-repeat: no-repeat;
+  height: 103px;
+  width: 116px;
+}
+/* line 107, ../../app/styles/temples.scss */
+#points.jerusalem .temple {
+  left: 374px;
+  top: 264px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: -334px 0;
+  background-repeat: no-repeat;
+  height: 113px;
+  width: 115px;
+}
+/* line 115, ../../app/styles/temples.scss */
+#points.grigory .temple {
+  left: 298px;
+  top: 365px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: -227px 0;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 107px;
+}
+/* line 123, ../../app/styles/temples.scss */
+#points.kipriana .temple {
+  left: 179px;
+  top: 436px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: -211px -113px;
+  background-repeat: no-repeat;
+  height: 104px;
+  width: 117px;
+}
+/* line 131, ../../app/styles/temples.scss */
+#points.nikola .temple {
+  left: 177px;
+  top: 95px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 119px;
+}
+/* line 139, ../../app/styles/temples.scss */
+#points.pokrova .temple {
+  left: 136px;
+  top: 225px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: 0 -217px;
+  background-repeat: no-repeat;
+  height: 185px;
+  width: 216px;
+}
+/* line 147, ../../app/styles/temples.scss */
+#points.troitsa .temple {
+  left: 12px;
+  top: 263px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: -119px 0;
+  background-repeat: no-repeat;
+  height: 107px;
+  width: 108px;
+}
+/* line 155, ../../app/styles/temples.scss */
+#points.patriarhi .temple {
+  left: 93px;
+  top: 371px;
+  background-image: url('../images/generated/plans/level2_small-s2538848d95.png');
+  background-position: 0 -113px;
+  background-repeat: no-repeat;
+  height: 88px;
+  width: 95px;
+}
+
+/* line 163, ../../app/styles/temples.scss */
+.player {
+  left: 840px;
+  top: 890px;
+  width: 610px;
+  height: 80px;
+}
+/* line 170, ../../app/styles/temples.scss */
+.player .play-pause {
+  left: 0px;
+  top: 16px;
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: -46px -84px;
+  background-repeat: no-repeat;
+  height: 37px;
+  width: 25px;
+}
+/* line 175, ../../app/styles/temples.scss */
+.player .play-pause.active {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: -46px -38px;
+  background-repeat: no-repeat;
+  height: 37px;
+  width: 24px;
+}
+/* line 180, ../../app/styles/temples.scss */
+.player .slider {
+  left: 54px;
+  top: 26px;
+  width: 520px;
+  height: 17px;
+}
+/* line 187, ../../app/styles/temples.scss */
+.player .slider .ui-slider-handle {
+  margin-left: -23px;
+  margin-top: -15px;
+}
+/* line 192, ../../app/styles/temples.scss */
+.player .slider .value {
+  top: 33px;
+}
+/* line 196, ../../app/styles/temples.scss */
+.player .slider .min {
+  left: -18px;
+}
+/* line 199, ../../app/styles/temples.scss */
+.player .slider .max {
+  right: -23px;
+}
+
+/* line 206, ../../app/styles/temples.scss */
+.text {
+  left: 104px;
+  top: 1031px;
+  width: 1328px;
+  height: 938px;
+  font-family: 'PT Serif Regular';
+  font-size: 32px;
+  line-height: 46px;
+}
+
+/* line 219, ../../app/styles/temples.scss */
+.info {
+  display: none;
+  left: 0px;
+  top: 240px;
+  width: 1536px;
+  height: 1808px;
+  background-color: #ededee;
+}
+/* line 230, ../../app/styles/temples.scss */
+.info .background {
+  width: 1536px;
+  height: 1808px;
+}
+/* line 235, ../../app/styles/temples.scss */
+.info #image {
+  display: none;
+  width: 1536px;
+  height: 1620px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+/* line 245, ../../app/styles/temples.scss */
+.info #image.p1 {
+  background-image: url('../images/audio/1.jpg?1382516159');
+}
+/* line 246, ../../app/styles/temples.scss */
+.info #image.p2 {
+  background-image: url('../images/audio/2.jpg?1382516145');
+}
+/* line 247, ../../app/styles/temples.scss */
+.info #image.p3 {
+  background-image: url('../images/audio/3.jpg?1382516107');
+}
+/* line 248, ../../app/styles/temples.scss */
+.info #image.p15 {
+  background-image: url('../images/audio/15.jpg?1382516092');
+}
+/* line 249, ../../app/styles/temples.scss */
+.info #image.p16 {
+  background-image: url('../images/audio/16.jpg?1382516083');
+}
+/* line 250, ../../app/styles/temples.scss */
+.info #image.p17 {
+  background-image: url('../images/audio/17.jpg?1382516068');
+}
+/* line 251, ../../app/styles/temples.scss */
+.info #image.p18 {
+  background-image: url('../images/audio/18.jpg?1382516054');
+}
+/* line 252, ../../app/styles/temples.scss */
+.info #image.p19 {
+  background-image: url('../images/audio/19.jpg?1382516038');
+}
+/* line 253, ../../app/styles/temples.scss */
+.info #image.p20 {
+  background-image: url('../images/audio/20.jpg?1382516028');
+}
+/* line 254, ../../app/styles/temples.scss */
+.info #image.p21 {
+  background-image: url('../images/audio/21.jpg?1382516016');
+}
+/* line 255, ../../app/styles/temples.scss */
+.info #image.p22 {
+  background-image: url('../images/audio/22.jpg?1382515959');
+}
+/* line 256, ../../app/styles/temples.scss */
+.info #image.p23 {
+  background-image: url('../images/audio/23.jpg?1382515946');
+}
+/* line 257, ../../app/styles/temples.scss */
+.info #image.p24 {
+  background-image: url('../images/audio/24.jpg?1382515936');
+}
+/* line 258, ../../app/styles/temples.scss */
+.info #image.p25 {
+  background-image: url('../images/audio/25.jpg?1382515923');
+}
+/* line 259, ../../app/styles/temples.scss */
+.info #image.p26 {
+  background-image: url('../images/audio/26.jpg?1382515909');
+}
+/* line 260, ../../app/styles/temples.scss */
+.info #image.p27 {
+  background-image: url('../images/audio/27.jpg?1382515895');
+}
+/* line 261, ../../app/styles/temples.scss */
+.info #image.p28 {
+  background-image: url('../images/audio/28.jpg?1382515877');
+}
+/* line 266, ../../app/styles/temples.scss */
+.info .panorama {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -206px;
+  background-repeat: no-repeat;
+  height: 76px;
+  width: 76px;
+}
+/* line 270, ../../app/styles/temples.scss */
+.info .audio {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -282px;
+  background-repeat: no-repeat;
+  height: 76px;
+  width: 76px;
+}
+/* line 275, ../../app/styles/temples.scss */
+.info.vasilii .background {
+  background-image: url('../images/plans/detailed/vasilii.png?1382361656');
+}
+/* line 278, ../../app/styles/temples.scss */
+.info.vasilii .panorama {
+  left: 927px;
+  top: 810px;
+}
+/* line 283, ../../app/styles/temples.scss */
+.info.vasilii .audio#p1 {
+  left: 1010px;
+  top: 810px;
+}
+/* line 287, ../../app/styles/temples.scss */
+.info.vasilii .audio#p2 {
+  left: 1067px;
+  top: 1036px;
+}
+/* line 291, ../../app/styles/temples.scss */
+.info.vasilii .audio#p3 {
+  left: 954px;
+  top: 620px;
+}
+/* line 299, ../../app/styles/temples.scss */
+.info.svirski .background {
+  background-image: url('../images/plans/detailed/svirski.png?1382361839');
+}
+/* line 302, ../../app/styles/temples.scss */
+.info.svirski .panorama {
+  left: 863px;
+  top: 718px;
+}
+/* line 307, ../../app/styles/temples.scss */
+.info.svirski .audio#p15 {
+  left: 730px;
+  top: 718px;
+}
+/* line 315, ../../app/styles/temples.scss */
+.info.varlaam .background {
+  background-image: url('../images/plans/detailed/varlaam.png?1382361925');
+}
+/* line 318, ../../app/styles/temples.scss */
+.info.varlaam .panorama {
+  left: 850px;
+  top: 684px;
+}
+/* line 323, ../../app/styles/temples.scss */
+.info.varlaam .audio#p16 {
+  left: 682px;
+  top: 712px;
+}
+/* line 327, ../../app/styles/temples.scss */
+.info.varlaam .audio#p17 {
+  left: 600px;
+  top: 604px;
+}
+/* line 331, ../../app/styles/temples.scss */
+.info.varlaam .audio#p18 {
+  left: 830px;
+  top: 570px;
+}
+/* line 339, ../../app/styles/temples.scss */
+.info.jerusalem .background {
+  background-image: url('../images/plans/detailed/jerusalem.png?1382361998');
+}
+/* line 342, ../../app/styles/temples.scss */
+.info.jerusalem .panorama {
+  left: 980px;
+  top: 708px;
+}
+/* line 347, ../../app/styles/temples.scss */
+.info.jerusalem .audio#p19 {
+  left: 880px;
+  top: 708px;
+}
+/* line 351, ../../app/styles/temples.scss */
+.info.jerusalem .audio#p20 {
+  left: 1010px;
+  top: 545px;
+}
+/* line 359, ../../app/styles/temples.scss */
+.info.grigory .background {
+  background-image: url('../images/plans/detailed/grigory.png?1382362072');
+}
+/* line 362, ../../app/styles/temples.scss */
+.info.grigory .panorama {
+  left: 787px;
+  top: 973px;
+}
+/* line 367, ../../app/styles/temples.scss */
+.info.grigory .audio#p25 {
+  left: 680px;
+  top: 843px;
+}
+/* line 371, ../../app/styles/temples.scss */
+.info.grigory .audio#p26 {
+  left: 815px;
+  top: 773px;
+}
+/* line 379, ../../app/styles/temples.scss */
+.info.kipriana .background {
+  background-image: url('../images/plans/detailed/kipriana.png?1382362159');
+}
+/* line 382, ../../app/styles/temples.scss */
+.info.kipriana .panorama {
+  left: 835px;
+  top: 835px;
+}
+/* line 387, ../../app/styles/temples.scss */
+.info.kipriana .audio#p23 {
+  left: 709px;
+  top: 899px;
+}
+/* line 395, ../../app/styles/temples.scss */
+.info.nikola .background {
+  background-image: url('../images/plans/detailed/nikola.png?1382362250');
+}
+/* line 398, ../../app/styles/temples.scss */
+.info.nikola .panorama {
+  left: 983px;
+  top: 633px;
+}
+/* line 403, ../../app/styles/temples.scss */
+.info.nikola .audio#p21 {
+  left: 816px;
+  top: 633px;
+}
+/* line 411, ../../app/styles/temples.scss */
+.info.pokrova .background {
+  background-image: url('../images/plans/detailed/pokrova.png?1382362780');
+}
+/* line 414, ../../app/styles/temples.scss */
+.info.pokrova .panorama {
+  left: 867px;
+  top: 712px;
+}
+/* line 419, ../../app/styles/temples.scss */
+.info.pokrova .audio#p27 {
+  left: 980px;
+  top: 712px;
+}
+/* line 423, ../../app/styles/temples.scss */
+.info.pokrova .audio#p28 {
+  left: 800px;
+  top: 830px;
+}
+/* line 431, ../../app/styles/temples.scss */
+.info.troitsa .background {
+  background-image: url('../images/plans/detailed/troitsa.png?1382362845');
+}
+/* line 434, ../../app/styles/temples.scss */
+.info.troitsa .panorama {
+  left: 780px;
+  top: 775px;
+}
+/* line 439, ../../app/styles/temples.scss */
+.info.troitsa .audio#p22 {
+  left: 650px;
+  top: 775px;
+}
+/* line 447, ../../app/styles/temples.scss */
+.info.patriarhi .background {
+  background-image: url('../images/plans/detailed/patriarhi.png?1382362903');
+}
+/* line 450, ../../app/styles/temples.scss */
+.info.patriarhi .panorama {
+  left: 854px;
+  top: 820px;
+}
+/* line 455, ../../app/styles/temples.scss */
+.info.patriarhi .audio#p24 {
+  left: 723px;
+  top: 787px;
+}
+/* line 462, ../../app/styles/temples.scss */
+.info .player {
+  display: none;
+  left: 0px;
+  top: 1620px;
+  width: 1536px;
+  height: 188px;
+}
+/* line 471, ../../app/styles/temples.scss */
+.info .player .player-content-gray {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #ededee;
+  opacity: 0.6;
+}
+/* line 484, ../../app/styles/temples.scss */
+.info .player .play-pause {
+  left: 70px;
+  top: 77px;
+}
+/* line 489, ../../app/styles/temples.scss */
+.info .player .slider {
+  left: 150px;
+  top: 77px;
+  width: 1290px;
+  height: 36px;
+}
+/* line 496, ../../app/styles/temples.scss */
+.info .player .slider .ui-slider-handle {
+  margin-left: -22px;
+  margin-top: -5px;
+}
+/* line 501, ../../app/styles/temples.scss */
+.info .player .slider .value {
+  top: 46px;
+}
+/* line 505, ../../app/styles/temples.scss */
+.info .player .slider .min {
+  left: 0px;
+}
+/* line 508, ../../app/styles/temples.scss */
+.info .player .slider .max {
+  right: 0px;
+}

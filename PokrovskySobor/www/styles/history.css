@@ -1,0 +1,742 @@
+/* line 17, ../../app/styles/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    width: 1536px;
+    height: 2048px;
+}
+
+/* line 22, ../../app/styles/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../app/styles/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../app/styles/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../app/styles/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../app/styles/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../app/styles/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../app/styles/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../app/styles/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Regular';
+  src: url("fonts/ptn57f-webfont.eot");
+  src: url("fonts/ptn57f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn57f-webfont.woff") format("woff"), url("fonts/ptn57f-webfont.ttf") format("truetype"), url("fonts/ptn57f-webfont.svg#pt_sans_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Bold';
+  src: url("fonts/ptn77f-webfont.eot");
+  src: url("fonts/ptn77f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn77f-webfont.woff") format("woff"), url("fonts/ptn77f-webfont.ttf") format("truetype"), url("fonts/ptn77f-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Demi Regular';
+  src: url("fonts/ptn67-webfont.eot");
+  src: url("fonts/ptn67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn67-webfont.woff") format("woff"), url("fonts/ptn67-webfont.ttf") format("truetype"), url("fonts/ptn67-webfont.svg#pt_sans_pro_narrow_demiRg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Regular';
+  src: url("fonts/ptz55f-webfont.eot");
+  src: url("fonts/ptz55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz55f-webfont.woff") format("woff"), url("fonts/ptz55f-webfont.ttf") format("truetype"), url("fonts/ptz55f-webfont.svg#pt_serif_captionregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Extra Bold Regular';
+  src: url("fonts/pts85-webfont.eot");
+  src: url("fonts/pts85-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts85-webfont.woff") format("woff"), url("fonts/pts85-webfont.ttf") format("truetype"), url("fonts/pts85-webfont.svg#pt_sans_pro_extra_boldregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Italic';
+  src: url("fonts/ptz56f-webfont.eot");
+  src: url("fonts/ptz56f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz56f-webfont.woff") format("woff"), url("fonts/ptz56f-webfont.ttf") format("truetype"), url("fonts/ptz56f-webfont.svg#pt_serif_captionitalic") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Demi Regular';
+  src: url("fonts/pts67-webfont.eot");
+  src: url("fonts/pts67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts67-webfont.woff") format("woff"), url("fonts/pts67-webfont.ttf") format("truetype"), url("fonts/pts67-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Light Regular';
+  src: url("fonts/ptn47-webfont.eot");
+  src: url("fonts/ptn47-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn47-webfont.woff") format("woff"), url("fonts/ptn47-webfont.ttf") format("truetype"), url("fonts/ptn47-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Regular';
+  src: url("fonts/ptf55f-webfont.eot");
+  src: url("fonts/ptf55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf55f-webfont.woff") format("woff"), url("fonts/ptf55f-webfont.ttf") format("truetype"), url("fonts/ptf55f-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Caption Regular';
+  src: url("fonts/ptc55f-webfont.eot");
+  src: url("fonts/ptc55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptc55f-webfont.woff") format("woff"), url("fonts/ptc55f-webfont.ttf") format("truetype"), url("fonts/ptc55f-webfont.svg#pt_sans_captionregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Extra Bold Regular';
+  src: url("fonts/ptn87-webfont.eot");
+  src: url("fonts/ptn87-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn87-webfont.woff") format("woff"), url("fonts/ptn87-webfont.ttf") format("truetype"), url("fonts/ptn87-webfont.svg#pt_sans_pro_narrow_extra_boRg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url("fonts/pts55f-webfont.eot");
+  src: url("fonts/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts55f-webfont.woff") format("woff"), url("fonts/pts55f-webfont.ttf") format("truetype"), url("fonts/pts55f-webfont.svg#pt_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Light';
+  src: url("fonts/pts47-webfont.eot");
+  src: url("fonts/pts47-webfont.eot") format("embedded-opentype"), url("fonts/pts47-webfont.woff") format("woff"), url("fonts/pts47-webfont.ttf") format("truetype"), url("fonts/pts47-webfont.svg#PTSansProCondensedLight") format("svg");
+}
+
+/* line 26, ../../app/styles/_base.scss */
+div, ul {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* line 32, ../../app/styles/_base.scss */
+.page {
+  left: 0px;
+  top: 0px;
+  width: 1536px;
+  height: 2048px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level1 {
+  left: 0px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level2 {
+  left: 1536px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level3 {
+  left: 3072px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level4 {
+  left: 4608px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level5 {
+  left: 6144px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level6 {
+  left: 7680px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level7 {
+  left: 9216px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level8 {
+  left: 10752px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level9 {
+  left: 12288px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level10 {
+  left: 13824px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level11 {
+  left: 15360px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level12 {
+  left: 16896px;
+}
+
+/* line 47, ../../app/styles/_base.scss */
+.page-header {
+  left: 104px;
+  top: 57px;
+  position: fixed;
+  font-family: "PT Sans Pro Condensed Demi Regular";
+  font-size: 45px;
+  letter-spacing: 1px;
+  line-height: 120%;
+}
+
+/* line 59, ../../app/styles/_base.scss */
+.color-gray {
+  color: #808183;
+}
+
+/* line 63, ../../app/styles/_base.scss */
+.underline {
+  border-bottom: 1px solid;
+}
+
+/* line 67, ../../app/styles/_base.scss */
+.red-line {
+  padding-left: 40px;
+}
+
+/* line 71, ../../app/styles/_base.scss */
+.button {
+  top: 52px;
+  position: fixed;
+}
+/* line 76, ../../app/styles/_base.scss */
+.button.audio, .button.text {
+  left: 859px;
+}
+/* line 79, ../../app/styles/_base.scss */
+.button.model, .button.infographics, .button.panorama {
+  left: 988px;
+}
+/* line 82, ../../app/styles/_base.scss */
+.button.plan {
+  left: 1117px;
+}
+/* line 85, ../../app/styles/_base.scss */
+.button.contents {
+  left: 1245px;
+}
+/* line 88, ../../app/styles/_base.scss */
+.button.back {
+  left: 1374px;
+}
+/* line 92, ../../app/styles/_base.scss */
+.button.hint {
+  left: 1374px;
+}
+
+/* line 97, ../../app/styles/_base.scss */
+.page-hint {
+  left: 104px;
+  top: 272px;
+  font-family: "PT Sans Regular";
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+/* line 105, ../../app/styles/_base.scss */
+.page-hint.right {
+  left: 854px;
+}
+
+/* line 110, ../../app/styles/_base.scss */
+.page-content-gray {
+  left: 0px;
+  top: 240px;
+  width: 1536px;
+  height: 1808px;
+  z-index: -1;
+  background-color: #ededee;
+}
+
+/* line 121, ../../app/styles/_base.scss */
+.hint-box {
+  left: 778px;
+  top: 264px;
+  width: 45px;
+  height: 45px;
+  background: #63c6ef;
+}
+
+/* line 130, ../../app/styles/_base.scss */
+.ui-slider {
+  background: white;
+  -moz-border-radius-topleft: 15px;
+  -webkit-border-top-left-radius: 15px;
+  border-top-left-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: solid;
+  border-width: 1px;
+  border-color: #808183;
+  background: #ededee;
+}
+/* line 142, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-range {
+  top: 0px;
+  height: 100%;
+  -moz-border-radius-topleft: 13px;
+  -webkit-border-top-left-radius: 13px;
+  border-top-left-radius: 13px;
+  -moz-border-radius-bottomleft: 13px;
+  -webkit-border-bottom-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  background: #6c61a7;
+}
+/* line 152, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  outline-style: none;
+  margin-left: -22px;
+  margin-top: -5px;
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -84px;
+  background-repeat: no-repeat;
+  height: 46px;
+  width: 46px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.ui-slider .ui-slider-handle:active {
+  background-position: 0 -38px;
+}
+/* line 162, ../../app/styles/_base.scss */
+.ui-slider .value {
+  top: 46px;
+  font-family: "PT Sans Regular";
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+/* line 170, ../../app/styles/_base.scss */
+.ui-slider .min {
+  left: 0px;
+}
+/* line 173, ../../app/styles/_base.scss */
+.ui-slider .max {
+  right: 0px;
+}
+/* line 176, ../../app/styles/_base.scss */
+.ui-slider .current {
+  margin-left: -15px;
+}
+
+/* line 181, ../../app/styles/_base.scss */
+.navigation {
+  top: 1983px;
+  position: fixed;
+}
+/* line 185, ../../app/styles/_base.scss */
+.navigation div {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: white;
+}
+/* line 192, ../../app/styles/_base.scss */
+.navigation div.active {
+  background: #63c6ef;
+}
+
+/* line 4, ../../app/styles/history.scss */
+.button.plan {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -1348px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.plan:active {
+  background-position: 0 -1458px;
+}
+/* line 7, ../../app/styles/history.scss */
+.button.contents {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -688px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.contents:active {
+  background-position: 0 -798px;
+}
+/* line 10, ../../app/styles/history.scss */
+.button.back {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -468px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.back:active {
+  background-position: 0 -358px;
+}
+
+/* line 15, ../../app/styles/history.scss */
+.timeline-wrapper {
+  left: 0px;
+  top: 1648px;
+  width: 1536px;
+  height: 400px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 24, ../../app/styles/history.scss */
+.timeline-wrapper::scrollbar {
+  display: none;
+}
+/* line 28, ../../app/styles/history.scss */
+.timeline-wrapper .line {
+  left: 0px;
+  top: 136px;
+  width: 5466px;
+  height: 4px;
+  background-color: #808183;
+}
+
+/* line 39, ../../app/styles/history.scss */
+.timeline {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 46, ../../app/styles/history.scss */
+.point {
+  top: 124px;
+  font-family: 'PT Sans Pro Condensed Demi Regular';
+}
+/* line 52, ../../app/styles/history.scss */
+.point#p1 {
+  left: 754px;
+}
+/* line 52, ../../app/styles/history.scss */
+.point#p2 {
+  left: 1016px;
+}
+/* line 56, ../../app/styles/history.scss */
+.point#p3 {
+  left: 1540px;
+}
+/* line 60, ../../app/styles/history.scss */
+.point#p4 {
+  left: 1802px;
+}
+/* line 60, ../../app/styles/history.scss */
+.point#p5 {
+  left: 2064px;
+}
+/* line 64, ../../app/styles/history.scss */
+.point#p6 {
+  left: 2588px;
+}
+/* line 68, ../../app/styles/history.scss */
+.point#p7 {
+  left: 2850px;
+}
+/* line 68, ../../app/styles/history.scss */
+.point#p8 {
+  left: 3112px;
+}
+/* line 68, ../../app/styles/history.scss */
+.point#p9 {
+  left: 3374px;
+}
+/* line 68, ../../app/styles/history.scss */
+.point#p10 {
+  left: 3636px;
+}
+/* line 68, ../../app/styles/history.scss */
+.point#p11 {
+  left: 3898px;
+}
+/* line 68, ../../app/styles/history.scss */
+.point#p12 {
+  left: 4160px;
+}
+/* line 68, ../../app/styles/history.scss */
+.point#p13 {
+  left: 4422px;
+}
+/* line 68, ../../app/styles/history.scss */
+.point#p14 {
+  left: 4684px;
+}
+
+/* line 74, ../../app/styles/history.scss */
+.circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #808183;
+}
+/* line 81, ../../app/styles/history.scss */
+.circle.left {
+  left: -262px;
+}
+
+/* line 86, ../../app/styles/history.scss */
+.year {
+  left: -44px;
+  top: 56px;
+  color: #808183;
+  font-size: 72px;
+}
+/* line 94, ../../app/styles/history.scss */
+.year.left {
+  left: -306px;
+}
+
+/* line 100, ../../app/styles/history.scss */
+.separator {
+  opacity: 0;
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  -o-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+
+/* line 107, ../../app/styles/history.scss */
+.active .separator {
+  opacity: 1;
+}
+
+/* line 112, ../../app/styles/history.scss */
+#content {
+  left: 0px;
+  top: 240px;
+  opacity: 0;
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  -o-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+/* line 120, ../../app/styles/history.scss */
+#content .image {
+  left: 104px;
+  top: 155px;
+  width: 750px;
+  height: 1085px;
+}
+/* line 127, ../../app/styles/history.scss */
+#content .text {
+  left: 988px;
+  top: 155px;
+  width: 447px;
+  height: 465px;
+  font-family: 'PT Serif Caption Regular';
+  font-size: 32px;
+  line-height: 44px;
+}
+/* line 139, ../../app/styles/history.scss */
+#content .plan {
+  left: 934px;
+  top: 700px;
+  width: 500px;
+  height: 533px;
+  background-image: url('../images/plans/history/p4.png?1382094530');
+}
+/* line 148, ../../app/styles/history.scss */
+#content.delay {
+  -webkit-transition: opacity 200ms;
+  -webkit-transition-delay: 200ms;
+  -moz-transition: opacity 200ms 200ms;
+  -o-transition: opacity 200ms 200ms;
+  transition: opacity 200ms 200ms;
+}
+/* line 152, ../../app/styles/history.scss */
+#content.p1 {
+  opacity: 1;
+}
+/* line 154, ../../app/styles/history.scss */
+#content.p1 .image {
+  background-image: url('../images/history/1.jpg?1382698584');
+}
+/* line 157, ../../app/styles/history.scss */
+#content.p1 .plan {
+  background-image: url('../images/plans/history/p1.png?1382090421');
+}
+/* line 161, ../../app/styles/history.scss */
+#content.p2 {
+  opacity: 1;
+}
+/* line 163, ../../app/styles/history.scss */
+#content.p2 .image {
+  background-image: url('../images/history/trollface.jpg?1382530834');
+}
+/* line 166, ../../app/styles/history.scss */
+#content.p2 .plan {
+  background-image: url('../images/plans/history/p2.png?1382090399');
+}
+/* line 170, ../../app/styles/history.scss */
+#content.p3 {
+  opacity: 1;
+}
+/* line 172, ../../app/styles/history.scss */
+#content.p3 .image {
+  background-image: url('../images/history/3.jpg?1382698940');
+}
+/* line 175, ../../app/styles/history.scss */
+#content.p3 .plan {
+  background-image: url('../images/plans/history/p3.png?1382090406');
+}
+/* line 179, ../../app/styles/history.scss */
+#content.p4 {
+  opacity: 1;
+}
+/* line 181, ../../app/styles/history.scss */
+#content.p4 .image {
+  background-image: url('../images/history/4.jpg?1382699119');
+}
+/* line 185, ../../app/styles/history.scss */
+#content.p5 {
+  opacity: 1;
+}
+/* line 187, ../../app/styles/history.scss */
+#content.p5 .image {
+  background-image: url('../images/history/5.jpg?1382699220');
+}
+/* line 191, ../../app/styles/history.scss */
+#content.p6 {
+  opacity: 1;
+}
+/* line 193, ../../app/styles/history.scss */
+#content.p6 .image {
+  background-image: url('../images/history/trollface.jpg?1382530834');
+}
+/* line 197, ../../app/styles/history.scss */
+#content.p7 {
+  opacity: 1;
+}
+/* line 199, ../../app/styles/history.scss */
+#content.p7 .image {
+  background-image: url('../images/history/7.jpg?1382698492');
+}
+/* line 203, ../../app/styles/history.scss */
+#content.p8 {
+  opacity: 1;
+}
+/* line 205, ../../app/styles/history.scss */
+#content.p8 .image {
+  background-image: url('../images/history/trollface.jpg?1382530834');
+}
+/* line 209, ../../app/styles/history.scss */
+#content.p9 {
+  opacity: 1;
+}
+/* line 211, ../../app/styles/history.scss */
+#content.p9 .image {
+  background-image: url('../images/history/9.jpg?1382699453');
+}
+/* line 215, ../../app/styles/history.scss */
+#content.p10 {
+  opacity: 1;
+}
+/* line 217, ../../app/styles/history.scss */
+#content.p10 .image {
+  background-image: url('../images/history/trollface.jpg?1382530834');
+}
+/* line 221, ../../app/styles/history.scss */
+#content.p11 {
+  opacity: 1;
+}
+/* line 223, ../../app/styles/history.scss */
+#content.p11 .image {
+  background-image: url('../images/history/trollface.jpg?1382530834');
+}
+/* line 227, ../../app/styles/history.scss */
+#content.p12 {
+  opacity: 1;
+}
+/* line 229, ../../app/styles/history.scss */
+#content.p12 .image {
+  background-image: url('../images/history/trollface.jpg?1382530834');
+}
+/* line 233, ../../app/styles/history.scss */
+#content.p13 {
+  opacity: 1;
+}
+/* line 235, ../../app/styles/history.scss */
+#content.p13 .image {
+  background-image: url('../images/history/13.jpg?1382699576');
+}
+/* line 239, ../../app/styles/history.scss */
+#content.p14 {
+  opacity: 1;
+}
+/* line 241, ../../app/styles/history.scss */
+#content.p14 .image {
+  background-image: url('../images/history/trollface.jpg?1382530834');
+}

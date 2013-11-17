@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="styles/model3d.css">
+    </head>
+    <body>
+        <div class="page-header"><span class="underline">Храмы Покровского собора</span></div>
+
+        <div class="button audio"></div>
+        <div class="button model"></div>
+        <div class="button plan"></div>
+        <div class="button contents"></div>
+        <div class="button back"></div>
+
+        <div class="page-hint color-gray">Дотроньтесь, чтобы вращать модель храма</div>
+
+        <div id="viewer" class="model3d"></div>
+
+        <div class="player">
+            <div class="player-content-gray"></div>
+            <div class="play-pause"></div>
+            <audio id="sound" preload="auto" src="vtour/audio/29.mp3" onplaying="playingIsStarted();" onended="soundIsStopped()"></audio>
+            <div class="slider">
+                <div class="value min"></div>
+                <div class="value current"></div>
+                <div class="value max"></div>
+            </div>
+        </div>
+
+        <script src="scripts/fastclick.min.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+
+        <script src="scripts/apple/prototype.js"></script>
+        <script src="scripts/apple/browserdetect.js"></script>
+        <script src="scripts/apple/apple_core.js"></script>
+        <script src="scripts/apple/vr.js"></script>
+        <script src="scripts/apple/library.js"></script>
+        <script src="scripts/model3d_apple.js"></script>
+    </body>
+</html>

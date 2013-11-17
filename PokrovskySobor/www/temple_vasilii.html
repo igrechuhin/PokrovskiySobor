@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="styles/temples.css">
+    </head>
+    <body>
+        <div class="page-header" data-default="<span class='underline'>Церковь Василия Блаженного</span>" data-info="<span class='underline'>План Церкви Василия Блаженного</span>">
+            <span class="underline">Церковь Василия Блаженного</span>
+        </div>
+
+        <div class="button panorama" data-destination="scene_church_vasilii"></div>
+        <div class="button plan"></div>
+        <div class="button contents"></div>
+        <div class="button back"></div>
+
+        <div id="images" class="vasilii"></div>
+        <div id="points" class="vasilii">
+            <div class="plan"></div>
+            <div class="temple"></div>
+        </div>
+
+        <div id="general" class="player" data-destination="1.mp3">
+            <div class="play-pause"></div>
+            <div class="slider">
+                <div class="value min"></div>
+                <div class="value current"></div>
+                <div class="value max"></div>
+            </div>
+        </div>
+
+        <div class="text">
+            <p><span class="red-line"></span>Небольшой по площади нижний храм являет собой прекрасный образец сочетания монументальной живописи в стиле модерн с архитектурой XVI в. Масляная роспись выполнена к 350-летию закладки собора (1905 г.). В нее включена стилизованная над-<br>пись о построении церкви после канонизации святого Василия Блаженного. В куполе изображен Спас Вседержитель, в барабане – праотцы, в перекрестиях свода – Деисус,<br>в парусах свода – евангелисты с символами.</p>
+            <p><span class="red-line"></span>На западной стене церкви представлен храмовый образ «Покров Пресвятой Бого-<br>родицы». В верхнем ярусе находятся изображения святых покровителей царству-<br>ющего дома. На северной и южной стенах – сцены из жития святого Василия Бла-<br>женного: «Чудо спасения на море» и «Чудо о шубе». Нижний ярус стен украшает традиционный древнерусский орнамент в виде полотенец.</p>
+            <p><span class="red-line"></span>Иконостас выполнен в 1895 г. в традиции ярославской школы XVII в. В нем нахо-<br>дятся две ранние иконы: «Богоматерь Смоленская» ХVI в. и местный образ «Свя-<br>той Василий Блаженный на фоне Кремля и Красной площади» XVIII в. Тогда же были изготовлены рака с сенью над захоронением Василия Блаженного. Боковые стороны раки закрыты металлическими картушами с изображением сюжетов из жития свя-<br>того. Деревянная сень украшена металлическими фигурными накладками и иконами<br>в медальонах, написанными маслом на медных пластинах.</p>
+        </div>
+
+        <div class="info vasilii">
+            <div class="background"></div>
+
+            <div class="panorama" data-destination="scene_church_vasilii"></div>
+
+            <div id="p1" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Интерьер</span>" data-destination="1.mp3"></div>
+            <div id="p2" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Фреска «Чудо на море»</span>" data-destination="2.mp3"></div>
+            <div id="p3" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Рака над мощами Василия Блаженного</span>" data-destination="3.mp3"></div>
+
+            <div id="image"></div>
+
+            <div id="specific" class="player">
+                <div class="player-content-gray"></div>
+                <div class="play-pause"></div>
+                <div class="slider">
+                    <div class="value min"></div>
+                    <div class="value current"></div>
+                    <div class="value max"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/fastclick.min.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="scripts/temples.js"></script>
+    </body>
+</html>

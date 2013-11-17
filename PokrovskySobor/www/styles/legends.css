@@ -1,0 +1,620 @@
+/* line 17, ../../app/styles/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    width: 1536px;
+    height: 2048px;
+}
+
+/* line 22, ../../app/styles/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../app/styles/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../app/styles/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../app/styles/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../app/styles/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../app/styles/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../app/styles/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../app/styles/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Regular';
+  src: url("fonts/ptn57f-webfont.eot");
+  src: url("fonts/ptn57f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn57f-webfont.woff") format("woff"), url("fonts/ptn57f-webfont.ttf") format("truetype"), url("fonts/ptn57f-webfont.svg#pt_sans_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Narrow Demi Bold';
+  src: url("fonts/ptn77f-webfont.eot");
+  src: url("fonts/ptn77f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn77f-webfont.woff") format("woff"), url("fonts/ptn77f-webfont.ttf") format("truetype"), url("fonts/ptn77f-webfont.svg#pt_sans_narrowbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Demi Regular';
+  src: url("fonts/ptn67-webfont.eot");
+  src: url("fonts/ptn67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn67-webfont.woff") format("woff"), url("fonts/ptn67-webfont.ttf") format("truetype"), url("fonts/ptn67-webfont.svg#pt_sans_pro_narrow_demiRg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Regular';
+  src: url("fonts/ptz55f-webfont.eot");
+  src: url("fonts/ptz55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz55f-webfont.woff") format("woff"), url("fonts/ptz55f-webfont.ttf") format("truetype"), url("fonts/ptz55f-webfont.svg#pt_serif_captionregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Extra Bold Regular';
+  src: url("fonts/pts85-webfont.eot");
+  src: url("fonts/pts85-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts85-webfont.woff") format("woff"), url("fonts/pts85-webfont.ttf") format("truetype"), url("fonts/pts85-webfont.svg#pt_sans_pro_extra_boldregular") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Caption Italic';
+  src: url("fonts/ptz56f-webfont.eot");
+  src: url("fonts/ptz56f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptz56f-webfont.woff") format("woff"), url("fonts/ptz56f-webfont.ttf") format("truetype"), url("fonts/ptz56f-webfont.svg#pt_serif_captionitalic") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Demi Regular';
+  src: url("fonts/pts67-webfont.eot");
+  src: url("fonts/pts67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts67-webfont.woff") format("woff"), url("fonts/pts67-webfont.ttf") format("truetype"), url("fonts/pts67-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Light Regular';
+  src: url("fonts/ptn47-webfont.eot");
+  src: url("fonts/ptn47-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn47-webfont.woff") format("woff"), url("fonts/ptn47-webfont.ttf") format("truetype"), url("fonts/ptn47-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Serif Regular';
+  src: url("fonts/ptf55f-webfont.eot");
+  src: url("fonts/ptf55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptf55f-webfont.woff") format("woff"), url("fonts/ptf55f-webfont.ttf") format("truetype"), url("fonts/ptf55f-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'PT Sans Caption Regular';
+  src: url("fonts/ptc55f-webfont.eot");
+  src: url("fonts/ptc55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptc55f-webfont.woff") format("woff"), url("fonts/ptc55f-webfont.ttf") format("truetype"), url("fonts/ptc55f-webfont.svg#pt_sans_captionregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Narrow Extra Bold Regular';
+  src: url("fonts/ptn87-webfont.eot");
+  src: url("fonts/ptn87-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ptn87-webfont.woff") format("woff"), url("fonts/ptn87-webfont.ttf") format("truetype"), url("fonts/ptn87-webfont.svg#pt_sans_pro_narrow_extra_boRg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Regular';
+  src: url("fonts/pts55f-webfont.eot");
+  src: url("fonts/pts55f-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/pts55f-webfont.woff") format("woff"), url("fonts/pts55f-webfont.ttf") format("truetype"), url("fonts/pts55f-webfont.svg#pt_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Pro Condensed Light';
+  src: url("fonts/pts47-webfont.eot");
+  src: url("fonts/pts47-webfont.eot") format("embedded-opentype"), url("fonts/pts47-webfont.woff") format("woff"), url("fonts/pts47-webfont.ttf") format("truetype"), url("fonts/pts47-webfont.svg#PTSansProCondensedLight") format("svg");
+}
+
+/* line 26, ../../app/styles/_base.scss */
+div, ul {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+/* line 32, ../../app/styles/_base.scss */
+.page {
+  left: 0px;
+  top: 0px;
+  width: 1536px;
+  height: 2048px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level1 {
+  left: 0px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level2 {
+  left: 1536px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level3 {
+  left: 3072px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level4 {
+  left: 4608px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level5 {
+  left: 6144px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level6 {
+  left: 7680px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level7 {
+  left: 9216px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level8 {
+  left: 10752px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level9 {
+  left: 12288px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level10 {
+  left: 13824px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level11 {
+  left: 15360px;
+}
+
+/* line 41, ../../app/styles/_base.scss */
+.page#level12 {
+  left: 16896px;
+}
+
+/* line 47, ../../app/styles/_base.scss */
+.page-header {
+  left: 104px;
+  top: 57px;
+  position: fixed;
+  font-family: "PT Sans Pro Condensed Demi Regular";
+  font-size: 45px;
+  letter-spacing: 1px;
+  line-height: 120%;
+}
+
+/* line 59, ../../app/styles/_base.scss */
+.color-gray {
+  color: #808183;
+}
+
+/* line 63, ../../app/styles/_base.scss */
+.underline {
+  border-bottom: 1px solid;
+}
+
+/* line 67, ../../app/styles/_base.scss */
+.red-line {
+  padding-left: 40px;
+}
+
+/* line 71, ../../app/styles/_base.scss */
+.button {
+  top: 52px;
+  position: fixed;
+}
+/* line 76, ../../app/styles/_base.scss */
+.button.audio, .button.text {
+  left: 859px;
+}
+/* line 79, ../../app/styles/_base.scss */
+.button.model, .button.infographics, .button.panorama {
+  left: 988px;
+}
+/* line 82, ../../app/styles/_base.scss */
+.button.plan {
+  left: 1117px;
+}
+/* line 85, ../../app/styles/_base.scss */
+.button.contents {
+  left: 1245px;
+}
+/* line 88, ../../app/styles/_base.scss */
+.button.back {
+  left: 1374px;
+}
+/* line 92, ../../app/styles/_base.scss */
+.button.hint {
+  left: 1374px;
+}
+
+/* line 97, ../../app/styles/_base.scss */
+.page-hint {
+  left: 104px;
+  top: 272px;
+  font-family: "PT Sans Regular";
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+/* line 105, ../../app/styles/_base.scss */
+.page-hint.right {
+  left: 854px;
+}
+
+/* line 110, ../../app/styles/_base.scss */
+.page-content-gray {
+  left: 0px;
+  top: 240px;
+  width: 1536px;
+  height: 1808px;
+  z-index: -1;
+  background-color: #ededee;
+}
+
+/* line 121, ../../app/styles/_base.scss */
+.hint-box {
+  left: 778px;
+  top: 264px;
+  width: 45px;
+  height: 45px;
+  background: #63c6ef;
+}
+
+/* line 130, ../../app/styles/_base.scss */
+.ui-slider {
+  background: white;
+  -moz-border-radius-topleft: 15px;
+  -webkit-border-top-left-radius: 15px;
+  border-top-left-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: solid;
+  border-width: 1px;
+  border-color: #808183;
+  background: #ededee;
+}
+/* line 142, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-range {
+  top: 0px;
+  height: 100%;
+  -moz-border-radius-topleft: 13px;
+  -webkit-border-top-left-radius: 13px;
+  border-top-left-radius: 13px;
+  -moz-border-radius-bottomleft: 13px;
+  -webkit-border-bottom-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  background: #6c61a7;
+}
+/* line 152, ../../app/styles/_base.scss */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  outline-style: none;
+  margin-left: -22px;
+  margin-top: -5px;
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -84px;
+  background-repeat: no-repeat;
+  height: 46px;
+  width: 46px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.ui-slider .ui-slider-handle:active {
+  background-position: 0 -38px;
+}
+/* line 162, ../../app/styles/_base.scss */
+.ui-slider .value {
+  top: 46px;
+  font-family: "PT Sans Regular";
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+/* line 170, ../../app/styles/_base.scss */
+.ui-slider .min {
+  left: 0px;
+}
+/* line 173, ../../app/styles/_base.scss */
+.ui-slider .max {
+  right: 0px;
+}
+/* line 176, ../../app/styles/_base.scss */
+.ui-slider .current {
+  margin-left: -15px;
+}
+
+/* line 181, ../../app/styles/_base.scss */
+.navigation {
+  top: 1983px;
+  position: fixed;
+}
+/* line 185, ../../app/styles/_base.scss */
+.navigation div {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: white;
+}
+/* line 192, ../../app/styles/_base.scss */
+.navigation div.active {
+  background: #63c6ef;
+}
+
+/* line 4, ../../app/styles/legends.scss */
+.button.plan {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -1348px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.plan:active {
+  background-position: 0 -1458px;
+}
+/* line 7, ../../app/styles/legends.scss */
+.button.contents {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -688px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.contents:active {
+  background-position: 0 -798px;
+}
+/* line 10, ../../app/styles/legends.scss */
+.button.back {
+  background-image: url('../images/generated/buttons-seea6603766.png');
+  background-position: 0 -468px;
+  background-repeat: no-repeat;
+  height: 110px;
+  width: 110px;
+}
+/* line 13, ../../app/styles/_sprites.scss */
+.button.back:active {
+  background-position: 0 -358px;
+}
+
+/* line 16, ../../app/styles/legends.scss */
+.navigation div {
+  background: #ededee;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav1 {
+  left: 470px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav2 {
+  left: 535px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav3 {
+  left: 600px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav4 {
+  left: 665px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav5 {
+  left: 730px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav6 {
+  left: 795px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav7 {
+  left: 860px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav8 {
+  left: 925px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav9 {
+  left: 990px;
+}
+
+/* line 23, ../../app/styles/legends.scss */
+.navigation #nav10 {
+  left: 1055px;
+}
+
+/* line 29, ../../app/styles/legends.scss */
+.images {
+  left: 104px;
+  top: 240px;
+  height: 654px;
+  width: 654px;
+}
+
+/* line 37, ../../app/styles/legends.scss */
+.question {
+  left: 850px;
+  width: 580px;
+  font-family: "PT Sans Pro Condensed Demi Regular";
+  font-size: 45px;
+  letter-spacing: 1px;
+  line-height: 120%;
+}
+
+/* line 48, ../../app/styles/legends.scss */
+.text {
+  left: 104px;
+  top: 1031px;
+  width: 1328px;
+  height: 938px;
+  font-family: 'PT Serif Regular';
+  font-size: 32px;
+  line-height: 46px;
+}
+
+/* line 62, ../../app/styles/legends.scss */
+#level1 .images {
+  background-image: url('../images/legends/1.png?1382526141');
+}
+/* line 65, ../../app/styles/legends.scss */
+#level1 .question {
+  top: 542px;
+}
+
+/* line 71, ../../app/styles/legends.scss */
+#level2 .images {
+  background-image: url('../images/legends/trollface.jpg?1382530834');
+}
+/* line 74, ../../app/styles/legends.scss */
+#level2 .question {
+  top: 461px;
+}
+
+/* line 80, ../../app/styles/legends.scss */
+#level3 .images {
+  background-image: url('../images/legends/trollface.jpg?1382530834');
+}
+/* line 83, ../../app/styles/legends.scss */
+#level3 .question {
+  top: 488px;
+}
+
+/* line 89, ../../app/styles/legends.scss */
+#level4 .images {
+  background-image: url('../images/legends/trollface.jpg?1382530834');
+}
+/* line 92, ../../app/styles/legends.scss */
+#level4 .question {
+  top: 488px;
+}
+
+/* line 98, ../../app/styles/legends.scss */
+#level5 .images {
+  background-image: url('../images/legends/trollface.jpg?1382530834');
+}
+/* line 101, ../../app/styles/legends.scss */
+#level5 .question {
+  top: 542px;
+}
+
+/* line 107, ../../app/styles/legends.scss */
+#level6 .images {
+  background-image: url('../images/legends/trollface.jpg?1382530834');
+}
+/* line 110, ../../app/styles/legends.scss */
+#level6 .question {
+  top: 488px;
+}
+
+/* line 116, ../../app/styles/legends.scss */
+#level7 .images {
+  background-image: url('../images/legends/7.png?1382526424');
+}
+/* line 119, ../../app/styles/legends.scss */
+#level7 .question {
+  top: 515px;
+}
+
+/* line 125, ../../app/styles/legends.scss */
+#level8 .images {
+  background-image: url('../images/legends/trollface.jpg?1382530834');
+}
+/* line 128, ../../app/styles/legends.scss */
+#level8 .question {
+  top: 542px;
+}
+
+/* line 134, ../../app/styles/legends.scss */
+#level9 .images {
+  background-image: url('../images/legends/9.png?1382526485');
+}
+/* line 137, ../../app/styles/legends.scss */
+#level9 .question {
+  top: 542px;
+}
+
+/* line 143, ../../app/styles/legends.scss */
+#level10 .images {
+  background-image: url('../images/legends/10.png?1382526525');
+}
+/* line 146, ../../app/styles/legends.scss */
+#level10 .question {
+  top: 542px;
+}

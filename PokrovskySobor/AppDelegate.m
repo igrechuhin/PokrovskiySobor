@@ -77,8 +77,11 @@
     
     webView.scalesPageToFit = YES;
     webView.scrollView.delegate = self;
-    webView.scrollView.scrollEnabled = NO;
+    webView.scrollView.scrollEnabled = YES;
     webView.scrollView.bounces = NO;
+    webView.scrollView.pagingEnabled = YES;
+    webView.scrollView.showsHorizontalScrollIndicator = NO;
+    webView.scrollView.showsVerticalScrollIndicator = NO;
     [self.window.rootViewController.view addSubview:webView];
     menuIsInFront = YES;
     history = [[Stack alloc] initWithObject:@"first"];
@@ -204,6 +207,12 @@
         
         return NO;
     }
+    else if ([command isEqual:@"page"])
+    {
+        NSInteger page = [operand integerValue];
+        [self.webView.scrollView scrollRectToVisible:CGRectMake(page * 768, 0, 768, 1024) animated:YES];
+        return NO;
+    }
     else if ([command isEqual:@"open"])
     {
         if (operand.length >= 1)
@@ -235,9 +244,27 @@
         }
         return NO;
     }
+    else if ([command isEqual:@"http"])
+    {
+        [[UIApplication sharedApplication] openURL:[request URL]];
+        return NO;
+    }
+    else return YES;
+    return NO;
+}
 
-    
-    return YES;
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    int off = roundf(scrollView.contentOffset.x);
+    NSString *js = [NSString stringWithFormat:@"scrollToPage('%d')", off/768+1];
+    [self.webView stringByEvaluatingJavaScriptFromString:js];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    int off = roundf(scrollView.contentOffset.x);
+    NSString *js = [NSString stringWithFormat:@"scrollToPage('%d')", off/768+1];
+    [self.webView stringByEvaluatingJavaScriptFromString:js];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

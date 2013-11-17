@@ -1,15 +1,96 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8" />
-		<title>История собора</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <link href="css/contents_v.css" media="all and (orientation:portrait)" rel="stylesheet" type="text/css" />
-		<link href="css/contents_h.css" media="all and (orientation:landscape)" rel="stylesheet" type="text/css" />
-	</head>
-	<body id="Main-page_h">
-		<div class="Basic-Text-Frame">
-			<p class="head-text"><span class="underline">История собора</span></p>
-		</div>
-	</body>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="styles/history.css">
+    </head>
+    <body>
+        <div class="page-content-gray"></div>
+        <div id="content">
+            <div class="image"></div>
+            <div class="text"></div>
+            <div class="plan"></div>
+        </div>
+
+        <div class="page-header"><span class="underline">История собора</span></div>
+
+        <div class="button plan"></div>
+        <div class="button contents"></div>
+        <div class="button back"></div>
+
+        <div class="timeline-wrapper">
+            <div class="line"></div>
+            <div class="timeline">
+                <div id="p1" class="point" data-text="Строительство собора Покрова Пресвятой Богородицы что на Рву.<br/>Первоначальный план собора.">
+                    <div class="circle left"></div>
+                    <div class="year left">1555<span class="separator">—</span></div>
+                    <div class="circle"></div>
+                    <div class="year">1561</div>
+                </div>
+                <div id="p2" class="point" data-text="Канонизация Василия Блаженного и пристройка к собору церкви над его захоронением">
+                    <div class="circle"></div>
+                    <div class="year">1588</div>
+                </div>
+                <div id="p3" class="point" data-text="Сооружение шатровой колокольни на месте открытой звонницы.<br/>Пристройка церкви Иоанна Блаженного.<br/>Над открытыми лестницами возведены крыльца с шатрами.">
+                    <div class="circle left"></div>
+                    <div class="year left">1670<span class="separator">—</span></div>
+                    <div class="circle"></div>
+                    <div class="year">1680</div>
+                </div>
+                <div id="p4" class="point" data-text="Капитальный ремонт собора по повелению Екатерины II.">
+                    <div class="circle"></div>
+                    <div class="year">1780</div>
+                </div>
+                <div id="p5" class="point" data-text="Перед отходом из Москвы Наполеон приказал взорвать собор, однако приказ не успели выполнить.">
+                    <div class="circle"></div>
+                    <div class="year">1812</div>
+                </div>
+                <div id="p6" class="point" data-text="Ремонт собора, сооружение подпорной стены, территория вокруг собора обнесена кованой решеткой.">
+                    <div class="circle left"></div>
+                    <div class="year left">1813</div>
+                    <div class="circle"></div>
+                    <div class="year">1817</div>
+                </div>
+                <div id="p7" class="point" data-text="Образована строительная комиссия по реставрации памятника, впервые поставлен вопрос о возвращении собору первоначального облика.">
+                    <div class="circle"></div>
+                    <div class="year">1898</div>
+                </div>
+                <div id="p8" class="point" data-text="Собор взят под охрану государством как памятник национального и мирового значения.<br/>В верхних церквях прекращены службы.">
+                    <div class="circle"></div>
+                    <div class="year">1918</div>
+                </div>
+                <div id="p9" class="point" data-text="Начало первой масштабной реставрации памятника.">
+                    <div class="circle"></div>
+                    <div class="year">1921</div>
+                </div>
+                <div id="p10" class="point" data-text="В соборе открыт историко-архитектурный музей.">
+                    <div class="circle"></div>
+                    <div class="year">1923</div>
+                </div>
+                <div id="p11" class="point" data-text="Прекращены богослужения в церкви Василия Блаженного.">
+                    <div class="circle"></div>
+                    <div class="year">1929</div>
+                </div>
+                <div id="p12" class="point" data-text="Собор включен<br/>в Список объектов Всемирного культурного наследия ЮНЕСКО.<br/>В церкви Покрова Пресвятой Богородицы возобновлены богослужения.">
+                    <div class="circle"></div>
+                    <div class="year">1990</div>
+                </div>
+                <div id="p13" class="point" data-text="Возобновлены богослужения в церкви Василия Блаженного.">
+                    <div class="circle"></div>
+                    <div class="year">1997</div>
+                </div>
+                <div id="p14" class="point" data-text="Собор отметил 450-летие.">
+                    <div class="circle"></div>
+                    <div class="year">2011</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/fastclick.min.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="scripts/history.js"></script>
+    </body>
 </html>

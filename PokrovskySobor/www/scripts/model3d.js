@@ -42,11 +42,12 @@ $(function() {
             var hidePercent = ui.value / maxValue,
                 $current = $('.value.current', $slider);
             if (hidePercent < 0.06 || hidePercent > 0.94) {
-                $current.fadeOut()
-            } else
+                $current.fadeOut();
+            } else {
                 $current.text(formatTime(ui.value))
                         .css('left', $(ui.handle).css('left'))
                         .fadeIn();
+            }
         }
     });
 });
@@ -66,11 +67,12 @@ $('.button.plan').on('click', function () {
 
 $('.button.contents').on('click', function () {
     'use strict';
-    alert('Переход на страницу содержания');
+    alert('Переход на страницу contents');
 });
 
 $('.button.back').on('click', function () {
-    window.open('back://model3d.html/dummy');
+    'use strict';
+    alert('Переход на предыдущую страницу');
 });
 
 $('.play-pause').on('click', function () {

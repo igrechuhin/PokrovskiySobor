@@ -1,15 +1,39 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8" />
-		<title>Бонусы</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <link href="css/contents_v.css" media="all and (orientation:portrait)" rel="stylesheet" type="text/css" />
-		<link href="css/contents_h.css" media="all and (orientation:landscape)" rel="stylesheet" type="text/css" />
-	</head>
-	<body id="Main-page_h">
-		<div class="Basic-Text-Frame">
-			<p class="head-text"><span class="underline">Бонусы</span></p>
-		</div>
-	</body>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=no">
+        <link rel="stylesheet" href="styles/bonus.css">
+    </head>
+    <body>
+        <div class="page-header"><span class="underline">Бонусы</span></div>
+
+        <div class="button plan"></div>
+        <div class="button contents"></div>
+        <div class="button back"></div>
+
+        <div class="text">
+            <p><span class="red-line"></span>Перед вами уникальная возможность побывать в недоступных для обычного посетителя местах Покровского собора.</p>
+            <p><span class="red-line"></span>Представляем вам панорамы Колокольни, Верхней обходной галереи вокруг Церкви Покрова Богородицы и Внешней обходной галереи.</p>
+        </div>
+
+        <div class="panorama belfry" data-destination="scene_belfry">
+            <span class="signature">Колокольня</span>
+        </div>
+        <div class="panorama external" data-destination="scene_external">
+            <span class="signature">Верхняя галерея вокруг<br>Церкви Покрова Богородицы</span>
+        </div>
+        <div class="panorama north" data-destination="scene_north">
+            <span class="signature">Северная внешняя обходная галерея</span>
+        </div>
+        <div class="panorama west" data-destination="scene_outer_gallery">
+            <span class="signature">Запандная внешняя обходная галерея</span>
+        </div>
+
+        <script src="scripts/fastclick.min.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="scripts/bonus.js"></script>
+    </body>
 </html>
