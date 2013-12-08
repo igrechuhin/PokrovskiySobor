@@ -33,7 +33,7 @@
     longPressRecognizer.numberOfTouchesRequired = 1;
     longPressRecognizer.cancelsTouchesInView = YES;
     longPressRecognizer.delegate = self;
-    [self.window addGestureRecognizer:longPressRecognizer];
+    //[self.window addGestureRecognizer:longPressRecognizer];
 
     /*
     //store menu buttons as circles in array

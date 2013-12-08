@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
         <link rel="stylesheet" href="styles/temples.css">
     </head>
     <body>
@@ -22,8 +22,9 @@
             <div class="temple"></div>
         </div>
 
-        <div id="general" class="player" data-destination="24.mp3">
+        <div id="general" class="player" data-destination="24.mp3" data-duration="81">
             <div class="play-pause"></div>
+            <audio id="sound" preload="auto" src="vtour/audio/24.mp3" onended="soundIsStopped()"></audio>
             <div class="slider">
                 <div class="value min"></div>
                 <div class="value current"></div>
@@ -61,5 +62,6 @@
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
         <script src="scripts/temples.js"></script>
+        <script src="scripts/ui-touch-punch.js"></script>
     </body>
 </html>

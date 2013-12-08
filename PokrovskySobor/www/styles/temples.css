@@ -21,8 +21,6 @@ time, mark, audio, video {
 }
 
 body {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
     width: 1536px;
     height: 2048px;
 }
