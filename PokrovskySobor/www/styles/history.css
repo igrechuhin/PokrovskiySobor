@@ -452,7 +452,7 @@ div, ul {
   width: 1536px;
   height: 400px;
   overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+/*  -webkit-overflow-scrolling: touch; */
 }
 /* line 24, ../../app/styles/history.scss */
 .timeline-wrapper::scrollbar {
@@ -634,7 +634,7 @@ div, ul {
 }
 /* line 163, ../../app/styles/history.scss */
 #content.p2 .image {
-  background-image: url('../images/history/trollface.jpg?1382530834');
+  background-image: url('../images/history/2.jpg?1382530834');
 }
 /* line 166, ../../app/styles/history.scss */
 #content.p2 .plan {
@@ -674,7 +674,7 @@ div, ul {
 }
 /* line 193, ../../app/styles/history.scss */
 #content.p6 .image {
-  background-image: url('../images/history/trollface.jpg?1382530834');
+  background-image: url('../images/history/6.jpg?1382530834');
 }
 /* line 197, ../../app/styles/history.scss */
 #content.p7 {
@@ -690,7 +690,7 @@ div, ul {
 }
 /* line 205, ../../app/styles/history.scss */
 #content.p8 .image {
-  background-image: url('../images/history/trollface.jpg?1382530834');
+  background-image: url('../images/history/8.jpg?1382530834');
 }
 /* line 209, ../../app/styles/history.scss */
 #content.p9 {
@@ -706,7 +706,7 @@ div, ul {
 }
 /* line 217, ../../app/styles/history.scss */
 #content.p10 .image {
-  background-image: url('../images/history/trollface.jpg?1382530834');
+  background-image: url('../images/history/10.jpg?1382530834');
 }
 /* line 221, ../../app/styles/history.scss */
 #content.p11 {
@@ -714,7 +714,7 @@ div, ul {
 }
 /* line 223, ../../app/styles/history.scss */
 #content.p11 .image {
-  background-image: url('../images/history/trollface.jpg?1382530834');
+  background-image: url('../images/history/11.jpg?1382530834');
 }
 /* line 227, ../../app/styles/history.scss */
 #content.p12 {
@@ -722,7 +722,7 @@ div, ul {
 }
 /* line 229, ../../app/styles/history.scss */
 #content.p12 .image {
-  background-image: url('../images/history/trollface.jpg?1382530834');
+  background-image: url('../images/history/12.jpg?1382530834');
 }
 /* line 233, ../../app/styles/history.scss */
 #content.p13 {
@@ -738,5 +738,5 @@ div, ul {
 }
 /* line 241, ../../app/styles/history.scss */
 #content.p14 .image {
-  background-image: url('../images/history/trollface.jpg?1382530834');
+  background-image: url('../images/history/14.jpg?1382530834');
 }

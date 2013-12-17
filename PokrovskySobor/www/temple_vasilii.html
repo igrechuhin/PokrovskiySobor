@@ -43,21 +43,20 @@
 
             <div class="panorama" data-destination="scene_church_vasilii"></div>
 
-            <div id="p1" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Интерьер</span>" data-destination="1.mp3" data-duration="122">
-                <audio class="sound" preload="auto" src="vtour/audio/1.mp3" onended="soundIsStopped2()"></audio>
+            <div id="p1" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Интерьер</span>" data-destination="vtour/audio/1.mp3" data-duration="122">
             </div>
-            <div id="p2" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Фреска «Чудо на море»</span>" data-destination="2.mp3" data-duration="69">
-                <audio class="sound" preload="auto" src="vtour/audio/2.mp3" onended="soundIsStopped2()"></audio>
+            <div id="p2" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Фреска «Чудо на море»</span>" data-destination="vtour/audio/2.mp3" data-duration="69">
             </div>
-            <div id="p3" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Рака над мощами Василия Блаженного</span>" data-destination="3.mp3" data-duration="46">
-                <audio class="sound" preload="auto" src="vtour/audio/3.mp3" onended="soundIsStopped2()"></audio>
+            <div id="p3" class="audio" data-header="<span class='underline'>Церковь Василия Блаженного.</span><br/><span class='underline'>Рака над мощами Василия Блаженного</span>" data-destination="vtour/audio/3.mp3" data-duration="46">
             </div>
+
+            <audio id="sound2" onended="soundIsStopped2()"></audio>
 
             <div id="image"></div>
 
             <div id="specific" class="player">
                 <div class="player-content-gray"></div>
-                <div class="play-pause"></div>
+                <div class="play-pause active"></div>
                 <div class="slider">
                     <div class="value min"></div>
                     <div class="value current"></div>

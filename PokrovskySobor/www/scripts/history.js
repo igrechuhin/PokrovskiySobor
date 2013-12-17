@@ -48,7 +48,7 @@ $(function() {
 
     function scroll (event) {
         clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(scrollEnd, 300);
+        scrollTimer = setTimeout(scrollEnd, 200);
 
         var scrollPos = event.target.scrollLeft;
 
@@ -84,8 +84,8 @@ $(function() {
                 $leftYear.css({
                     left: -pointsStep - ((1 - scale) * yearShift) + leftYear + 'px',
                     top: topYear + 'px',
-                    'font-size': sizeYear + 'px',
-                    display: (yearOffset < 0 || yearOffset > screenWidth) ? 'none' : 'block'
+                    'font-size': sizeYear + 'px'//,
+                    //display: (yearOffset < 0 || yearOffset > screenWidth) ? 'none' : 'block'
                 });
             }
             $right.css({
@@ -98,8 +98,8 @@ $(function() {
             $rightYear.css({
                 left: leftYear + 'px',
                 top: topYear + 'px',
-                'font-size': sizeYear + 'px',
-                display: (yearOffset < 0 || yearOffset > screenWidth) ? 'none' : 'block'
+                'font-size': sizeYear + 'px'//,
+                //display: (yearOffset < 0 || yearOffset > screenWidth) ? 'none' : 'block'
             });
         });
     }
@@ -137,7 +137,7 @@ $(function() {
         });
     }
 
-    $wrapper.on('touchmove scroll', scroll).scrollLeft(5);
+  $wrapper.on('scroll', scroll).scrollLeft(5);
 
     $points.on('click', function () {
         var id = event.currentTarget.id,
