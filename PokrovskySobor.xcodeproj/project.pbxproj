@@ -393,16 +393,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PokrovskySobor/PokrovskySobor-Prefix.pch";
 				INFOPLIST_FILE = "PokrovskySobor/PokrovskySobor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18A7B689-CA1D-43B0-A62F-FC4713DB81B7";
-				"PROVISIONING_PROFILE[sdk=*]" = "18A7B689-CA1D-43B0-A62F-FC4713DB81B7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "D114BB2A-4618-497E-911A-629E70C8A15B";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -411,15 +411,15 @@
 		1CD8AF3F17DF10DE00F7AF5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Umnov (8986C3Z3PQ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PokrovskySobor/PokrovskySobor-Prefix.pch";
 				INFOPLIST_FILE = "PokrovskySobor/PokrovskySobor-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18A7B689-CA1D-43B0-A62F-FC4713DB81B7";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "18A7B689-CA1D-43B0-A62F-FC4713DB81B7";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D114BB2A-4618-497E-911A-629E70C8A15B";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
