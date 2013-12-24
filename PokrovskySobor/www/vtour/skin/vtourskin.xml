@@ -1,5 +1,5 @@
 <krpano>
-	<!-- krpano 1.16.5 - Default Virtual Tour Skin -->
+	<!-- krpano 1.17.pr - Default Virtual Tour Skin -->
 
 	<!-- Global Skin settings (can be overridden in the 'outer' xml) -->
 	<skin_settings bingmaps="false"
@@ -13,6 +13,7 @@
 	               thumbs_onhoverscrolling="false"
 	               thumbs_scrollbuttons="false"
 	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
 	               tooltips_thumbs="false"
 	               tooltips_hotspots="false"
 	               tooltips_mapspots="false"
@@ -36,15 +37,48 @@
 	<!-- skin_thumbtext_style - style/textfield for the (optional, skin_settings.thumbs_text) thumbnails texts -->
 	<style name="skin_thumbtext_style" url="%SWFPATH%/plugins/textfield.swf" align="bottom" width="100%" autoheight="true" y="5" enabled="false" background="false" border="false" css="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:10px;" textshadow="1" />
 
-	<!-- skin_hotspotstyle - style for the hotspots (note - the onclick event will be overwritten! the hotspots need to have a 'linkedscene' attribute to be clickable) -->
-	<style name="skin_hotspotstyle" url="vtourskin_hotspot.png" scale="1.0" edge="top" oy="0"
-	       distorted="false"
-	       onclick="if(linkedscene, tween(scale,0.25,0.5); tween(oy,-20,0.5); tween(alpha,0,0.5); looktohotspot(); loadscene(get(linkedscene),null,MERGE,BLEND(1)); skin_updatescroll(); );"
-	       onhover="if(skin_settings.tooltips_hotspots, if(linkedscene, showtext(get(scene[get(linkedscene)].title),SKIN_TOOLTIPS)) );"
+	<!-- skin_hotspotstyle - style for the hotspots (note - the onclick event will be overwritten here and can't be set directly at the hotspot! the hotspots need to have a 'linkedscene' attribute to be clickable) -->
+	<style name="skin_hotspotstyle" url="vtourskin_hotspot.png" scale="0.5" edge="top" oy="0" distorted="false"
+	       tooltip=""
+	       onclick="if(linkedscene, skin_hidetooltips(); tween(scale,0.25,0.5); tween(oy,-20,0.5); tween(alpha,0,0.5); looktohotspot(); loadscene(get(linkedscene),null,MERGE,BLEND(1)); skin_updatescroll(); );"
+	       onloaded="if(skin_settings.tooltips_hotspots, if(linkedscene, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); ));"
 	       />
 
-	<!-- tooltips textstyle -->
-	<textstyle name="SKIN_TOOLTIPS" font="Arial" fontsize="16" bold="true" italic="false" background="false" border="false" textcolor="0xFFFFFF" effect="dropshadow(1,45,0x000000,4,1);" fadeintime="0.1" fadetime="0.05" />
+	<!-- skin_tooltip - style for the thumb, hotspot and mapspot tooltips -->
+	<style name="skin_tooltips"
+	       onover="copy(layer[skin_tooltip].html, tooltip);
+	               set(layer[skin_tooltip].visible, true);
+	               tween(layer[skin_tooltip].alpha, 1.0, 0.1);
+	               asyncloop(hovering, copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
+	       onout="tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );"
+	       />
+
+	<!-- the tooltip textfield -->
+	<layer name="skin_tooltip" keep="true"
+	       url="%SWFPATH%/plugins/textfield.swf"
+	       parent="STAGE"
+	       visible="false" alpha="0" enabled="false"
+	       align="lefttop" edge="bottom" oy="-2" width="200" autoheight="true"
+	       background="false" backgroundcolor="0xFFFFFF" backgroundalpha="1.0"
+	       border="false" bordercolor="0x000000" borderalpha="1.0" borderwidth="1.0" roundedge="0"
+	       shadow="0.0" shadowrange="4.0" shadowangle="45" shadowcolor="0x000000" shadowalpha="1.0"
+	       textshadow="1" textshadowrange="6.0" textshadowangle="90" textshadowcolor="0x000000" textshadowalpha="1.0"
+	       css="text-align:center; color:#FFFFFF; font-family:Arial; font-weight:bold; font-size:16px;"
+	       html=""
+	       />
+
+	<!-- context menu -->
+	<contextmenu>
+		<item name="krp" caption="KRPANO"     />
+		<item name="fsc" caption="FULLSCREEN" />
+		<item name="scm" caption="Change Controlmode" onclick="switch(control.mousetype, 'moveto', 'drag2d');"               separator="true"      />
+		<item name="nrm" caption="Normal View"        onclick="skin_view_normal();"        showif="view.vlookatrange == 180" separator="true"      />
+		<item name="fis" caption="Fisheye View"       onclick="skin_view_fisheye();"       showif="view.vlookatrange == 180" devices="flash|webgl" />
+		<item name="ste" caption="Stereographic View" onclick="skin_view_stereographic();" showif="view.vlookatrange == 180" devices="flash|webgl" />
+		<item name="arc" caption="Architectural View" onclick="skin_view_architectural();" showif="view.vlookatrange == 180"                       />
+		<item name="pan" caption="Pannini View"       onclick="skin_view_pannini();"       showif="view.vlookatrange == 180" devices="flash|webgl" />
+		<item name="lpv" caption="Little Planet View" onclick="skin_view_littleplanet();"  showif="view.vlookatrange == 180" devices="flash|webgl" />
+	</contextmenu>
 
 
 	<!-- Skin Layout -->
@@ -73,8 +107,8 @@
 
 	<layer name="skin_control_bar" keep="true" type="container" bgcolor="0x000000" bgalpha="0.5" align="leftbottom" width="100%" height="40" x="0" y="20" y_opened="20" y_closed="-42" zorder="3">
 		<layer name="skin_btmborder"  style="skin_base"           crop="2|52|60|12"   align="bottomleft" edge="topleft" width="100%" height="12" x="0" y="0" enabled="false" />
-		<layer name="skin_btn_prev"   style="skin_base|skin_glow" crop="0|64|64|64"   align="left"        x="5"    y="0"   scale="0.5" alpha="0.5"  onclick="skin_nextscene(-1);" />
-		<layer name="skin_btn_next"   style="skin_base|skin_glow" crop="64|64|64|64"  align="right"       x="5"    y="0"   scale="0.5" alpha="0.5"  onclick="skin_nextscene(+1);" />
+		<layer name="skin_btn_prev"   style="skin_base|skin_glow" crop="0|64|64|64"   align="left"        x="5"    y="0"   scale="0.5" alpha="0.5"  onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(-1), skin_nextscene(-1) );" />
+		<layer name="skin_btn_next"   style="skin_base|skin_glow" crop="64|64|64|64"  align="right"       x="5"    y="0"   scale="0.5" alpha="0.5"  onclick="if(skin_settings.thumbs_loop, skin_nextscene_loop(+1), skin_nextscene(+1) );" />
 		<layer name="skin_btn_thumbs" style="skin_base|skin_glow" crop="0|128|64|64"  align="leftbottom"  x="50"   y="4"   scale="0.5" ondown2="skin_showmap(false); skin_showthumbs();" />
 		<layer name="skin_btn_map"    style="skin_base|skin_glow" crop="64|128|64|64" align="leftbottom"  x="90"   y="4"   scale="0.5" ondown2="skin_showthumbs(false); skin_showmap();" visible="false" />
 		<layer name="skin_btn_lt"     style="skin_base|skin_glow" crop="0|192|64|64"  align="bottom"      x="-100" y="4"   scale="0.5" ondown2="set(hlookat_moveforce,-1);" onup2="set(hlookat_moveforce,0);" />
@@ -276,7 +310,8 @@
 			set(layer[get(thumbname)].linkedscene, get(scene[get(i)].name) );
 			set(layer[get(thumbname)].onclick, copy(layer[skin_thumbborder].parent, name); loadscene(get(linkedscene), null, MERGE, BLEND(0.5)); );
 			if(skin_settings.tooltips_thumbs,
-				set(layer[get(thumbname)].onhover, showtext(get(scene[get(linkedscene)].title),SKIN_TOOLTIPS); );
+				set(layer[get(thumbname)].tooltip, get(scene[get(i)].title) );
+				layer[get(thumbname)].loadstyle(skin_tooltips);
 			  );
 			if(skin_settings.thumbs_text,
 				txtadd(thumbtext, 'skin_thumbtext_', get(i));
@@ -293,11 +328,14 @@
 		for(set(i,0), i LT scene.count, inc(i),
 			if(scene[get(i)].lat,
 				txtadd(spotname, 'spot', get(i));
-				txtadd(spotclickevent, 'activatespot(',get(spotname),'); loadscene(', get(scene[get(i)].name), ',null,MERGE,BLEND(1)); skin_updatescroll(); delayedcall(0.5,skin_showmap(false));');
+				txtadd(spotclickevent, 'skin_hidetooltips(); activatespot(',get(spotname),'); loadscene(', get(scene[get(i)].name), ',null,MERGE,BLEND(1)); skin_updatescroll(); delayedcall(0.5,skin_showmap(false));');
 				copy(scene[get(i)].mapspotname, spotname);
-				if(skin_settings.tooltips_mapspots, escape(spottitle,get(scene[get(i)].title)); txtadd(spothoverevent,'showtext(',get(spottitle),',SKIN_TOOLTIPS)'); , set(spothoverevent,null); );
-
-				addspot(get(spotname), get(scene[get(i)].lat), get(scene[get(i)].lng), get(scene[get(i)].heading), false, get(spotclickevent), get(spothoverevent));
+				addspot(get(spotname), get(scene[get(i)].lat), get(scene[get(i)].lng), get(scene[get(i)].heading), false, get(spotclickevent), null);
+				if(skin_settings.tooltips_mapspots,
+					set(layer[skin_map].spot[get(spotname)].tooltip, get(scene[get(i)].title) );
+					txtadd(layer[skin_map].spot[get(spotname)].onover, 'set(hovering,true);',  get(style[skin_tooltips].onover) );
+					txtadd(layer[skin_map].spot[get(spotname)].onout,  'set(hovering,false);', get(style[skin_tooltips].onout)  );
+				  );
 			  );
 		  );
 		activatespot(spot0);
@@ -372,21 +410,35 @@
 				if(title, txtadd(layer[skin_title].html, get(title), ' - ', get(scene[get(xml.scene)].title) ); , copy(layer[skin_title].html, scene[get(xml.scene)].title ); );
 				delayedcall(0.1, set(layer[skin_title].visible,true) );
 
-				if(scene[get(xml.scene)].index GT 0,
-					set(layer[skin_btn_prev].enabled, true);
-					set(layer[skin_btn_prev].alpha, 1.0);
-				  ,
-					set(layer[skin_btn_prev].enabled, false);
-					set(layer[skin_btn_prev].alpha, 0.3);
-				  );
+				if(skin_settings.thumbs_loop == false,
+					if(scene[get(xml.scene)].index GT 0,
+						set(layer[skin_btn_prev].enabled, true);
+						set(layer[skin_btn_prev].alpha, 1.0);
+					  ,
+						set(layer[skin_btn_prev].enabled, false);
+						set(layer[skin_btn_prev].alpha, 0.3);
+					  );
 
-				sub(lastsceneindex, scene.count, 1);
-				if(scene[get(xml.scene)].index LT lastsceneindex,
-					set(layer[skin_btn_next].enabled, true);
-					set(layer[skin_btn_next].alpha, 1.0);
+					sub(lastsceneindex, scene.count, 1);
+					if(scene[get(xml.scene)].index LT lastsceneindex,
+						set(layer[skin_btn_next].enabled, true);
+						set(layer[skin_btn_next].alpha, 1.0);
+					  ,
+						set(layer[skin_btn_next].enabled, false);
+						set(layer[skin_btn_next].alpha, 0.3);
+					  );
 				  ,
-					set(layer[skin_btn_next].enabled, false);
-					set(layer[skin_btn_next].alpha, 0.3);
+					if(scene.count GT 1,
+						set(layer[skin_btn_prev].enabled, true);
+						set(layer[skin_btn_prev].alpha, 1.0);
+						set(layer[skin_btn_next].enabled, true);
+						set(layer[skin_btn_next].alpha, 1.0);
+					  ,
+						set(layer[skin_btn_prev].enabled, false);
+						set(layer[skin_btn_prev].alpha, 0.3);
+						set(layer[skin_btn_next].enabled, false);
+						set(layer[skin_btn_next].alpha, 0.3);
+					  );
 				  );
 
 				txtadd(layer[skin_thumbborder].parent, 'skin_thumb_', get(scene[get(xml.scene)].index));
@@ -422,6 +474,11 @@
 
 	<action name="skin_showloading">
 		set(layer[skin_loadingtext].visible, %1);
+	</action>
+
+	<action name="skin_hidetooltips">
+		set(layer[skin_tooltip].alpha,0.0);
+		set(layer[skin_tooltip].visible,false);
 	</action>
 
 	<action name="skin_buttonglow">
@@ -536,6 +593,67 @@
 			set(plugin[data].soundOn,true);
 			set(layer[skin_btn_audio].crop, '0|647|64|64');
 		);
+	</action>
+	<action name="skin_view_normal">
+		tween(view.fovmax,       150.0, distance(179, 1.00), easeoutquad);
+		tween(view.architectural,  0.0, distance(1.0, 0.45), easeoutquad);
+		tween(view.fisheye,        0.0, distance(1.0, 0.45), easeoutquad, set(view.stereographic,false); if(view.pannini, set(view.pannini,false); delayedcall(0,updateobject(true,true)); ); );
+		set(centerview,false);
+		if(view.architectural LT 0.2,
+			if(view.vlookat LT -60, set(centerview,true));
+			if(view.vlookat GT +60, set(centerview,true));
+			if(centerview, tween(view.vlookat, 0.0, distance(90, 0.45), easeoutquad));
+		  );
+		if(view.fov GE 150, tween(view.fov, 100.0, distance(50, 0.45), easeoutquad));
+	</action>
+
+	<action name="skin_view_fisheye">
+		tween(view.architectural, 0.0, distance(1.0, 0.30), easeoutquad);
+		tween(view.fisheye,       0.0 ,distance(1.0, 0.30), easeoutquad, set(view.stereographic,false); if(view.pannini, set(view.pannini,false); delayedcall(0,updateobject(true,true)); ); set(view.fovmax,179); tween(view.fisheye, 0.35, distance(1.0,1.25)); );
+	</action>
+
+	<action name="skin_view_architectural">
+		tween(view.fovmax,       150.0, distance(179, 1.00), easeoutquad);
+		tween(view.architectural,  1.0, distance(1.0, 0.45), easeoutquad);
+		tween(view.fisheye,        0.0, distance(1.0, 0.45), easeoutquad, set(view.stereographic,false); if(view.pannini, set(view.pannini,false); delayedcall(0,updateobject(true,true)); ); );
+	</action>
+
+	<action name="skin_view_stereographic">
+		tween(view.architectural, 0.0, 0.25);
+		set(backtonormalfirst,false);
+		if(view.pannini       == true,  set(backtonormalfirst,true) );
+		if(view.stereographic == false, set(backtonormalfirst,true) );
+		if(backtonormalfirst, tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeoutquad, WAIT); );
+		if(view.pannini, set(view.pannini,false); delayedcall(0,updateobject(true,true)); );
+		set(view.stereographic, true);
+		set(view.fovmax, 150);
+		tween(view.fisheye, 1.0, distance(1.0, 0.75), easeoutquad);
+	</action>
+
+	<action name="skin_view_pannini">
+		tween(view.architectural, 0.0, 0.25);
+		set(backtonormalfirst,false);
+		if(view.pannini       == false, set(backtonormalfirst,true) );
+		if(view.stereographic == false, set(backtonormalfirst,true) );
+		if(backtonormalfirst, tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeoutquad, WAIT); );
+		set(view.pannini, true);
+		set(view.stereographic, true);
+		set(view.fovmax, 150);
+		tween(view.fisheye, 1.0, distance(1.0, 0.75), easeoutquad);
+	</action>
+
+	<action name="skin_view_littleplanet">
+		tween(view.architectural, 0.0, 0.25);
+		tween(view.vlookat,  90, distance(179, 1.50), easeoutquad);
+		set(backtonormalfirst,false);
+		if(view.pannini       == true,  set(backtonormalfirst,true) );
+		if(view.stereographic == false, set(backtonormalfirst,true) );
+		if(backtonormalfirst, tween(view.fisheye, 0.0 ,distance(1.0, 0.25), easeoutquad, WAIT); );
+		if(view.pannini, set(view.pannini,false); delayedcall(0,updateobject(true,true)); );
+		set(view.stereographic, true);
+		set(view.fovmax, 150);
+		tween(view.fisheye, 1.0, distance(1.0, 0.75), easeoutquad);
+		tween(view.fov,     150, distance(179, 0.75), easeoutquad);
 	</action>
 
 </krpano>
