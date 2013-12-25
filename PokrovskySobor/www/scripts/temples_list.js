@@ -21,15 +21,37 @@ $(function () {
         $bonusHint2 = $('.bonus-hint', $pageLevel2);
 
     function updateView ($plan, $listEntries, $bonusHint, target) {
-        var classes = target.className.split(' '),
-            isBonus = (classes.indexOf('bonus') !== -1),
-            filter = classes.filter(function (element) { return element !== 'bonus'; })[0];
-        $plan.fadeOut();
+        var classes    = target.className.split(' '),
+            isBonus    = (classes.indexOf('bonus') !== -1),
+            isPanorama = (classes.indexOf('panorama') !== -1),
+            isInfo = (classes.indexOf('info') !== -1),
+            filter     = classes.filter(function (element) { return element !== 'bonus' && element !== 'list'; })[0];
+        if (isPanorama) {
+            if ($(target).parent().hasClass('active')) {
+                window.open('pan://temples_list.html/' + $(event.target).data('destination'));
+            }
+            return;
+        }
+        if (isInfo) {
+            if ($(target).parent().hasClass('active')) {
+                window.open('open://temples_list.html/' + $(event.target).data('destination'));
+            }
+            return;
+        }
+        $plan.removeClass('active');
         $listEntries.removeClass('active');
-        $plan.filter('.' + filter).fadeIn();
-        $(target).addClass('active');
+        $plan.filter('.' + filter).addClass('active');
+        $listEntries.filter('.' + filter).addClass('active');
         $bonusHint[isBonus ? 'fadeIn' : 'fadeOut']();
     }
+
+    $pageLevel1Plan.on('click', function (event) {
+        updateView($pageLevel1Plan, $pageLevel1ListEntries, $bonusHint1, event.target);
+    });
+
+    $pageLevel2Plan.on('click', function (event) {
+        updateView($pageLevel2Plan, $pageLevel2ListEntries, $bonusHint1, event.target);
+    });
 
     $pageLevel1List.on('click', function (event) {
         updateView($pageLevel1Plan, $pageLevel1ListEntries, $bonusHint1, event.target);
@@ -50,16 +72,6 @@ $('.button.contents').on('click', function () {
 
 $('.button.back').on('click', function () {
     window.open('back://temples_list.html/dummy');
-});
-
-$('.info').on('click', function (event) {
-    'use strict';
-              window.open('open://temples_list.html/' + $(event.target).data('destination'));
-});
-
-$('.panorama').on('click', function (event) {
-    'use strict';
-                  window.open('pan://temples_list.html/' + $(event.target).data('destination'));
 });
 
 $(function() {

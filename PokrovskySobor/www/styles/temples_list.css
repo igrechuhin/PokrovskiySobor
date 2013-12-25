@@ -857,7 +857,8 @@ div, ul {
 }
 /* line 349, ../../app/styles/temples_list.scss */
 #level2 div.inner-gallery .panorama {
-  left: 370px;
+  left: 286px;
+  top: 69px;
 }
 /* line 354, ../../app/styles/temples_list.scss */
 #level2 div.outer-gallery {
@@ -949,7 +950,30 @@ div, ul {
 
 /* line 432, ../../app/styles/temples_list.scss */
 div.list {
-  display: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 438, ../../app/styles/temples_list.scss */
+div.list.active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  -o-transition-duration: 400ms;
+  transition-duration: 400ms;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  z-index: 100000;
+}
+/* line 447, ../../app/styles/temples_list.scss */
+div.list.active.outer-gallery, div.list.active.inner-gallery {
+  z-index: 0;
 }
 /* line 436, ../../app/styles/temples_list.scss */
 div.list .info {
