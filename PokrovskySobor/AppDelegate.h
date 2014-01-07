@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Stack.h"
+#import "PhotoGalleryController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,
     UIGestureRecognizerDelegate, UIWebViewDelegate, UIScrollViewDelegate>
@@ -20,6 +21,7 @@
     //UIButton *mainMenuView;
     UIWebView *mainMenuView;
     UIWebView *webView;
+    PhotoGalleryController *photoGalleryController;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -27,8 +29,9 @@
 //@property (nonatomic, retain) UIButton *mainMenuView;
 @property (nonatomic, retain) UIWebView *mainMenuView;
 @property (nonatomic, retain) UIWebView *webView;
+@property (nonatomic, retain) PhotoGalleryController *photoGalleryController;
 
-- (void)longPressDetected:(UIGestureRecognizer *)sender;
+//- (void)longPressDetected:(UIGestureRecognizer *)sender;
 - (void)openPage:(NSString *)pageName;
 
 @end

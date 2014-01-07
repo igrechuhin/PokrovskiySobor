@@ -10,10 +10,11 @@
 #import "CCircleButton.h"
 #import "RootViewController.h"
 #import "Stack.h"
+#import "PhotoGalleryController.h"
 
 @implementation AppDelegate
 
-@synthesize longPressRecognizer, mainMenuView, webView;
+@synthesize longPressRecognizer, mainMenuView, webView, photoGalleryController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -54,7 +55,7 @@
     mainMenuView.contentMode = UIViewContentModeScaleAspectFill;
     mainMenuView.backgroundColor = [UIColor whiteColor];
     
-    [mainMenuView addTarget:self action:@selector(menuTouchUp:withEvent:) forControlEvents:UIControlEventTouchUpInside];*/
+    [mainMenuView addTarget:self action:@selector(menuTouchUp:withEvent:) forControlEvents:UIControlEventTouchUpInside];
     
     mainMenuView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     mainMenuView.delegate = self;
@@ -64,13 +65,13 @@
     
     mainMenuView.scalesPageToFit = YES;
     mainMenuView.scrollView.scrollEnabled = NO;
-    mainMenuView.scrollView.bounces = NO;
+    mainMenuView.scrollView.bounces = NO;*/
 
     [self.window makeKeyAndVisible];
     
     webView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     webView.delegate = self;
-    url = [NSURL fileURLWithPath:
+    NSURL *url = [NSURL fileURLWithPath:
                   [[NSBundle mainBundle] pathForResource:@"contents" ofType:@"html" inDirectory:@"www"]];
     [webView loadRequest:[NSURLRequest
                           requestWithURL:[NSURL URLWithString:[url.absoluteString stringByAppendingString:@"?first=1"]]]];
@@ -95,7 +96,7 @@
     return YES;
 }
 
-- (void)longPressDetected:(UIGestureRecognizer *)sender
+/*- (void)longPressDetected:(UIGestureRecognizer *)sender
 {
     if (menuIsInFront)
     {
@@ -141,13 +142,13 @@
                                         completion: nil];
                     }];
     
-}
+}*/
 
 - (void)openPage:(NSString *)pageName
 {
-    if (menuIsInFront) {
+/*    if (menuIsInFront) {
         [self hideMenu];
-    }
+    }*/
     
     NSURL *url;
     
@@ -170,9 +171,9 @@
 
 - (void)openPano:(NSString *)sceneName
 {
-    if (menuIsInFront) {
+/*    if (menuIsInFront) {
         [self hideMenu];
-    }
+    }*/
     
     NSString *query;
     if (sceneName) query = [@"?startscene=" stringByAppendingString:sceneName];
@@ -184,6 +185,15 @@
     [webView loadRequest:[NSURLRequest requestWithURL:res]];
     menuIsInFront = NO;
     [history push:[@"pan:" stringByAppendingString:sceneName]];
+}
+
+- (void)openPhoto:(NSString *)galleryName
+{
+    photoGalleryController = [[PhotoGalleryController alloc] initWithGalleryName:galleryName];
+    //[self.window.rootViewController addChildViewController:photoGalleryController];
+    [self.window.rootViewController.view addSubview:photoGalleryController.view];
+    
+    [history push:[@"photo:" stringByAppendingString:galleryName]];
 }
 
 
@@ -226,6 +236,14 @@
         if (operand.length >= 1)
         {
             [self openPano:operand];
+        }
+        return NO;
+    }
+    else if ([command isEqual:@"photo"])
+    {
+        if (operand.length >= 1)
+        {
+            [self openPhoto:operand];
         }
         return NO;
     }
