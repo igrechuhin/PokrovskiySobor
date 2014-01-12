@@ -14,14 +14,28 @@
 
 @implementation PhotoGalleryController
 
-@synthesize galleryName = _galleryName;
+@synthesize galleryName = _galleryName, closeButton;
 
 - (id)initWithGalleryName:(NSString *)galleryName {
     if ((self = [self initWithNibName:nil bundle:nil])) {
         self.galleryName = galleryName;
         _isLoaded = NO;
+        
+        // Добавляем кнопку для закрытия
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(698.0, 30.0, 40.0, 40.0);
+        [button setImage:[UIImage imageNamed:@"close.png"] forState:UIControlStateNormal];
+        [button addTarget:(id)self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        self.closeButton = button;
+        [self.view addSubview:self.closeButton];
+
     }
     return self;
+}
+
+-(void)closeButtonPressed
+{
+    [self.view removeFromSuperview];
 }
 
 - (void)loadView {
@@ -102,6 +116,18 @@
 
 - (id<NIPagingScrollViewPage>)pagingScrollView:(NIPagingScrollView *)pagingScrollView pageViewForIndex:(NSInteger)pageIndex {
     return [self.photoAlbumView pagingScrollView:pagingScrollView pageViewForIndex:pageIndex];
+}
+
+- (void)setChromeVisibility:(BOOL)isVisible animated:(BOOL)animated
+{
+    [super setChromeVisibility:isVisible animated:animated];
+    
+    if (isVisible)
+    {
+        closeButton.hidden = NO;
+    }
+    else closeButton.hidden = YES;
+    
 }
 
 @end

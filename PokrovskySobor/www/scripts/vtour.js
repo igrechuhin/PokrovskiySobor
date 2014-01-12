@@ -4,5 +4,5 @@ $(function() {
 });
 
 $('#ClosePanorama').on('click', function () {
-    alert('Close panorama');
+    window.open('back://vtour.html/dummy');
 });

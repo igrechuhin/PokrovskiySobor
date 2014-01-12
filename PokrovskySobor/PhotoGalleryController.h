@@ -14,6 +14,7 @@
 {
 @private
     NSString* _galleryName;
+    UIButton *_closeButton;
     
     BOOL _isLoaded;
     NSInteger _photosNumber;
@@ -22,6 +23,8 @@
 - (id)initWithGalleryName:(NSString*)galleryName;
 
 @property (nonatomic, readwrite, copy) NSString* galleryName;
+@property (nonatomic, retain) UIButton *closeButton;
+
 
 
 @end

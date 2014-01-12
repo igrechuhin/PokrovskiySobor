@@ -193,7 +193,7 @@
     //[self.window.rootViewController addChildViewController:photoGalleryController];
     [self.window.rootViewController.view addSubview:photoGalleryController.view];
     
-    [history push:[@"photo:" stringByAppendingString:galleryName]];
+    //[history push:[@"photo:" stringByAppendingString:galleryName]];
 }
 
 
