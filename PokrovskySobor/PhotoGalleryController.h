@@ -16,6 +16,7 @@
     NSString* _galleryName;
     
     BOOL _isLoaded;
+    NSInteger _photosNumber;
 }
 
 - (id)initWithGalleryName:(NSString*)galleryName;

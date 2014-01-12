@@ -29,6 +29,19 @@
     
     if (!_isLoaded)
     {
+/*        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
+        NSArray *contents = [fileManager contentsOfDirectoryAtURL:bundleURL
+                                       includingPropertiesForKeys:@[]
+                                                          options:NSDirectoryEnumerationSkipsHiddenFiles
+                                                            error:nil];
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"pathExtension == 'jpg'"];
+        _photosNumber = [[contents filteredArrayUsingPredicate:predicate] count];*/
+        
+        NSString *dir = @"www/images/gallery/";
+        _photosNumber = [[[NSBundle mainBundle] pathsForResourcesOfType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]] count];
+        
         self.photoAlbumView.dataSource = self;
         self.photoScrubberView.dataSource = self;
 
@@ -53,22 +66,23 @@
 
 - (NSInteger)numberOfPhotosInScrubberView:(NIPhotoScrubberView *)photoScrubberView
 {
-    return 12;
+    return _photosNumber;
 }
 
 - (UIImage *)photoScrubberView: (NIPhotoScrubberView *)photoScrubberView
               thumbnailAtIndex: (NSInteger)thumbnailIndex
 {
     NSBundle *mainBundle = [NSBundle mainBundle];
-    NSString *file = [NSString stringWithFormat:@"%d_thumb", thumbnailIndex+1];
-    UIImage* image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:@"www/images/gallery/vasilii"]];
+    NSString *file = [NSString stringWithFormat:@"%d", thumbnailIndex+1];
+    NSString *dir = @"www/images/gallery/";
+    UIImage* image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/thumbs"]]];
     
     return image;
 }
 
 - (NSInteger)numberOfPagesInPagingScrollView:(NIPhotoAlbumScrollView *)photoScrollView
 {
-    return 12;
+    return _photosNumber;
 }
 
 - (UIImage *)photoAlbumScrollView: (NIPhotoAlbumScrollView *)photoAlbumScrollView
@@ -78,7 +92,8 @@
           originalPhotoDimensions: (CGSize *)originalPhotoDimensions {
     NSBundle *mainBundle = [NSBundle mainBundle];
     NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
-    UIImage* image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:@"www/images/gallery/vasilii"]];
+    NSString *dir = @"www/images/gallery/";
+    UIImage* image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
     *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
     *originalPhotoDimensions = [image size];
     

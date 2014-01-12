@@ -88,7 +88,7 @@ function soundIsStopped2()
 
 $('.panorama').on('click', function (event) {
     'use strict';
-    alert('Переход на панораму : ' + $(event.target).data('destination'));
+    window.open('pan://temples.html/' + $(event.target).data('destination'));
 });
 
 $('.button.plan').on('click', function () {
@@ -118,7 +118,7 @@ $('#general .play-pause').on('click', function (event) {
 
 $('#images').on('click', function () {
     'use strict';
-    alert('Открыть фотогалерею на альбоме : ' + event.target.className);
+    window.open('photo://temples.html/' + event.target.className);
 });
 
 $(function () {
