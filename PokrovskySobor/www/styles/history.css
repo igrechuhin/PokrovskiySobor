@@ -608,14 +608,6 @@ div, ul {
   height: 533px;
   background-image: url('../images/plans/history/p4.png?1382094530');
 }
-/* line 148, ../../app/styles/history.scss */
-#content.delay {
-  -webkit-transition: opacity 200ms;
-  -webkit-transition-delay: 200ms;
-  -moz-transition: opacity 200ms 200ms;
-  -o-transition: opacity 200ms 200ms;
-  transition: opacity 200ms 200ms;
-}
 /* line 152, ../../app/styles/history.scss */
 #content.p1 {
   opacity: 1;

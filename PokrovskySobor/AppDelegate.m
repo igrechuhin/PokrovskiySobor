@@ -83,6 +83,7 @@
     webView.scrollView.pagingEnabled = YES;
     webView.scrollView.showsHorizontalScrollIndicator = NO;
     webView.scrollView.showsVerticalScrollIndicator = NO;
+    webView.dataDetectorTypes = UIDataDetectorTypeNone;
     [self.window.rootViewController.view addSubview:webView];
     menuIsInFront = YES;
     history = [[Stack alloc] initWithObject:@"first"];
