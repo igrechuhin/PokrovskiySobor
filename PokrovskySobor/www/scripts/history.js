@@ -33,6 +33,7 @@ $(function() {
             size: 140
         },
         points = [],
+        lastActivePoint,
         scrollTimer,
         skipEnd = false;
 
@@ -116,11 +117,16 @@ $(function() {
         points.forEach(function (point) {
             var distance = (scrollPos < point.left) ? point.left - scrollPos :
                            (scrollPos > point.right) ? scrollPos - point.right : 0;
+            if (lastActivePoint === point) {
+                distance *= 3;
+            }
+
             if (minDistance > distance) {
                 minDistance = distance;
                 selectedPoint = point;
             }
         });
+        lastActivePoint = selectedPoint;
 
         $element = $(selectedPoint.element);
 
