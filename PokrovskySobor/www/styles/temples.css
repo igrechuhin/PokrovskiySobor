@@ -21,8 +21,8 @@ time, mark, audio, video {
 }
 
 body {
-    width: 1536px;
-    height: 2048px;
+  width: 1536px;
+  height: 2048px;
 }
 
 /* line 22, ../../app/styles/compass/reset/_utilities.scss */
@@ -697,7 +697,7 @@ div, ul {
   top: 240px;
   width: 1536px;
   height: 1808px;
-  background-color: #ededee;
+/*   background-color: #ededee; */
 }
 /* line 230, ../../app/styles/temples.scss */
 .info .background {
@@ -988,7 +988,7 @@ div, ul {
   height: 100%;
   z-index: -1;
   background-color: #ededee;
-  opacity: 0.6;
+/*   opacity: 0.6; */
 }
 /* line 484, ../../app/styles/temples.scss */
 .info .player .play-pause {
