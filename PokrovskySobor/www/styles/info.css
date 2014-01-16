@@ -20,6 +20,12 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: none;
+}
+
 /* line 22, ../../app/styles/compass/reset/_utilities.scss */
 html {
   line-height: 1;
