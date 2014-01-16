@@ -1,61 +1,59 @@
 $(function() {
-    'use strict';
-    FastClick.attach(document.body);
-    var parts = window.location.search.substr(1).split("&");
-    if (parts.length > 0)
-    {
-        var query = parts[0].split("=");
-        if (query[0] == "first")
-        {
-            $('.button.back').hide();
-        }
+  'use strict';
+  FastClick.attach(document.body);
+  var parts = window.location.search.substr(1).split("&");
+  if (parts.length > 0) {
+    var query = parts[0].split("=");
+    if (query[0] == "first") {
+      $('.button.back').hide();
     }
+  }
 });
 
 $(function() {
-    'use strict';
-    var $hintScreen = $('.hint-screen');
-    $('.button.hint').on('click', function () {
-        $hintScreen.fadeIn();
-    });
+  'use strict';
+  var $hintScreen = $('.hint-screen');
+  $('.button.hint').on('click', function () {
+    $hintScreen.fadeIn();
+  });
 
-    $hintScreen.on('click', function () {
-        $hintScreen.fadeOut();
-    });
+  $hintScreen.on('click', function () {
+    $hintScreen.fadeOut();
+  });
 });
 
 $('.button.back').on('click', function () {
-    window.open('back://contents.html/dummy');
+  window.open('back://contents.html/dummy');
 });
 
 $('.photo').on('click', function () {
-               window.open('photo://contents.html/vasilii');
-               });
+  window.open('photo://contents.html/vasilii');
+});
 
 $('.panorama').on('click', function () {
-                  window.open('pan://contents.html/scene_1_hall_3');
-                  });
+  window.open('pan://contents.html/scene_1_hall_3');
+});
 
 $('.info').on('click', function () {
-              window.open('open://contents.html/info');
-              });
+  window.open('open://contents.html/info');
+});
 
 $('.temples').on('click', function () {
-                 window.open('open://contents.html/temples_list');
-                 });
+  window.open('open://contents.html/model3d_apple');
+});
 
 $('.history').on('click', function () {
-                 window.open('open://contents.html/history');
-                 });
+  window.open('open://contents.html/history');
+});
 
 $('.about').on('click', function () {
-               window.open('open://contents.html/about');
-               });
+  window.open('open://contents.html/about');
+});
 
 $('.bonus').on('click', function () {
-               window.open('open://contents.html/bonus');
-               });
+  window.open('open://contents.html/bonus');
+});
 
 $('.legends').on('click', function () {
-                 window.open('open://contents.html/legends');
+  window.open('open://contents.html/legends');
 });
