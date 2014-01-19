@@ -15,6 +15,7 @@
 @private
     NSString* _galleryName;
     UIButton *_closeButton;
+    NSMutableArray *_images;
     
     BOOL _isLoaded;
     NSInteger _photosNumber;

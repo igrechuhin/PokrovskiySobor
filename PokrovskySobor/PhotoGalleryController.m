@@ -38,9 +38,10 @@
     [self.view removeFromSuperview];
 }
 
-- (void)loadView {
-    [super loadView];
-    
+/*- (void)loadView {
+    [super loadView];*/
+- (void)viewDidLoad {
+        [super viewDidLoad];
     if (!_isLoaded)
     {
 /*        NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -56,6 +57,11 @@
         NSString *dir = @"www/images/gallery/";
         _photosNumber = [[[NSBundle mainBundle] pathsForResourcesOfType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]] count];
         
+        _images = [[NSMutableArray alloc] init];
+        for (unsigned i = 0; i < _photosNumber; i++) {
+            [_images addObject:[NSNull null]];
+        }
+        
         self.photoAlbumView.dataSource = self;
         self.photoScrubberView.dataSource = self;
 
@@ -68,6 +74,7 @@
 
 - (void)viewDidUnload {
     _isLoaded = NO;
+    _images = nil;
     
     [super viewDidUnload];
 }
@@ -89,7 +96,7 @@
     NSBundle *mainBundle = [NSBundle mainBundle];
     NSString *file = [NSString stringWithFormat:@"%d", thumbnailIndex+1];
     NSString *dir = @"www/images/gallery/";
-    UIImage* image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/thumbs"]]];
+    UIImage *image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/thumbs"]]];
     
     return image;
 }
@@ -104,14 +111,24 @@
                         photoSize: (NIPhotoScrollViewPhotoSize *)photoSize
                         isLoading: (BOOL *)isLoading
           originalPhotoDimensions: (CGSize *)originalPhotoDimensions {
-    NSBundle *mainBundle = [NSBundle mainBundle];
-    NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
-    NSString *dir = @"www/images/gallery/";
-    UIImage* image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
-    *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
-    *originalPhotoDimensions = [image size];
-    
-    return image;
+    UIImage *image = [_images objectAtIndex:photoIndex];
+    if ((NSNull *)image != [NSNull null])
+    {
+        *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
+    }
+    else
+    {
+        NSBundle *mainBundle = [NSBundle mainBundle];
+        NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
+        NSString *dir = @"www/images/gallery/";
+        image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
+/*        image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/thumbs"]]];*/
+        *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
+        *originalPhotoDimensions = [image size];
+        [_images replaceObjectAtIndex:photoIndex withObject:image];
+    }
+    //NSLog(@"get photo at index: %d", photoIndex);
+    return [_images objectAtIndex:photoIndex];
 }
 
 - (id<NIPagingScrollViewPage>)pagingScrollView:(NIPagingScrollView *)pagingScrollView pageViewForIndex:(NSInteger)pageIndex {

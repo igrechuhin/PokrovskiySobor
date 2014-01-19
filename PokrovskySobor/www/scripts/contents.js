@@ -29,7 +29,7 @@ $('.button.back').on('click', function () {
 });
 
 $('.photo').on('click', function () {
-               window.open('photo://contents.html/vasilii');
+               window.open('photo://contents.html/gallery');
                });
 
 $('.panorama').on('click', function () {

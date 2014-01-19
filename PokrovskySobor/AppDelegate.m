@@ -14,7 +14,7 @@
 
 @implementation AppDelegate
 
-@synthesize longPressRecognizer, mainMenuView, webView, photoGalleryController;
+@synthesize longPressRecognizer, mainMenuView, webView, photoGalleryController, galleryController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -187,6 +187,15 @@
     [history push:[@"pan:" stringByAppendingString:sceneName]];
 }
 
+- (void)openGallery
+{
+    galleryController = [[GalleryController alloc] initWithNibName:nil bundle:nil];
+    //[self.window.rootViewController addChildViewController:photoGalleryController];
+    [self.window.rootViewController.view addSubview:galleryController.view];
+    
+    //[history push:[@"photo:" stringByAppendingString:galleryName]];
+}
+
 - (void)openPhoto:(NSString *)galleryName
 {
     photoGalleryController = [[PhotoGalleryController alloc] initWithGalleryName:galleryName];
@@ -243,7 +252,14 @@
     {
         if (operand.length >= 1)
         {
-            [self openPhoto:operand];
+            if ([operand isEqualToString:@"gallery"])
+            {
+                [self openGallery];
+            }
+            else
+            {
+                [self openPhoto:operand];
+            }
         }
         return NO;
     }

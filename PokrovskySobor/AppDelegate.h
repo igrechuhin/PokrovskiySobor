@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Stack.h"
 #import "PhotoGalleryController.h"
+#import "GalleryController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,
     UIGestureRecognizerDelegate, UIWebViewDelegate, UIScrollViewDelegate>
@@ -22,6 +23,7 @@
     UIWebView *mainMenuView;
     UIWebView *webView;
     PhotoGalleryController *photoGalleryController;
+    GalleryController *galleryController;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -30,8 +32,10 @@
 @property (nonatomic, retain) UIWebView *mainMenuView;
 @property (nonatomic, retain) UIWebView *webView;
 @property (nonatomic, retain) PhotoGalleryController *photoGalleryController;
+@property (nonatomic, retain) GalleryController *galleryController;
 
 //- (void)longPressDetected:(UIGestureRecognizer *)sender;
 - (void)openPage:(NSString *)pageName;
+- (void)openPhoto:(NSString *)galleryName;
 
 @end
