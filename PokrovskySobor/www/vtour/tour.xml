@@ -1129,7 +1129,7 @@ onstart="startup();">
 
 	</scene>
 
-	<scene name="scene_2_hall_out_2" title="2_hall_out_2" onstart="" thumburl="panos/2_hall_out_2.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_2_hall_out_2" title="Восточная площадка южного крыльца" onstart="" thumburl="panos/2_hall_out_2.tiles/thumb.jpg" lat="" lng="" heading="">
 		<events onxmlcomplete="onxmlcompleteaction_2(mapspot_2_hall_out_2, -162.93);"/>
 
 		<view hlookat="135.314" vlookat="13.163" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="20" fovmax="140" limitview="auto" />
@@ -1186,7 +1186,7 @@ onstart="startup();">
 
 	</scene>
 
-	<scene name="scene_2_hall_out_5" title="2_hall_out_5" onstart="" thumburl="panos/2_hall_out_5.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_2_hall_out_5" title="Площадка между церквями Киприана и Иустины и Трех патриархов" onstart="" thumburl="panos/2_hall_out_5.tiles/thumb.jpg" lat="" lng="" heading="">
 		<events onxmlcomplete="onxmlcompleteaction_2(mapspot_2_hall_out_5, -113.47);"/>
 
 		<view hlookat="-239.147" vlookat="7.475" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="20" fovmax="140" limitview="auto" />
@@ -1215,7 +1215,7 @@ onstart="startup();">
 
 	</scene>
 
-	<scene name="scene_2_hall_out_6" title="2_hall_out_6" onstart="" thumburl="panos/2_hall_out_6.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_2_hall_out_6" title="Площадка между церквями Святой Троицы и Александра Свирского" onstart="" thumburl="panos/2_hall_out_6.tiles/thumb.jpg" lat="" lng="" heading="">
 		<events onxmlcomplete="onxmlcompleteaction_2(mapspot_2_hall_out_6, 30.74);"/>
 
 		<view hlookat="-157.905" vlookat="7.500" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="20" fovmax="140" limitview="auto" />
@@ -1243,7 +1243,7 @@ onstart="startup();">
 
 	</scene>
 
-	<scene name="scene_2_hall_out_7" title="2_hall_out_7" onstart="" thumburl="panos/2_hall_out_7.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_2_hall_out_7" title="Южное крыльцо" onstart="" thumburl="panos/2_hall_out_7.tiles/thumb.jpg" lat="" lng="" heading="">
 		<events onxmlcomplete="onxmlcompleteaction_2(mapspot_2_hall_out_7, 287.85);"/>
 
 		<view hlookat="67.852" vlookat="1.569" fovtype="MFOV" fov="140.000" maxpixelzoom="2.0" fovmin="20" fovmax="140" limitview="auto" />
@@ -1324,7 +1324,7 @@ onstart="startup();">
 
     </scene>
 
-    <scene name="scene_pokrovsky_11_UP" title="pokrovsky_11_UP" onstart="" thumburl="panos/pokrovsky_11_UP.tiles/thumb.jpg" lat="" lng="" heading="">
+    <scene name="scene_pokrovsky_11_UP" title="Западная площадка южного крыльца" onstart="" thumburl="panos/pokrovsky_11_UP.tiles/thumb.jpg" lat="" lng="" heading="">
         <events onxmlcomplete="onxmlcompleteaction_2(mapspot_pokrovsky_11_UP, -175.81);"/>
 
         <view hlookat="-112.687" vlookat="-0.547" fovtype="MFOV" fov="120.000" maxpixelzoom="2.0" fovmin="20" fovmax="140" limitview="auto" />
