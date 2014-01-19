@@ -125,10 +125,11 @@
 /*        image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/thumbs"]]];*/
         *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
         *originalPhotoDimensions = [image size];
-        [_images replaceObjectAtIndex:photoIndex withObject:image];
+        //[_images replaceObjectAtIndex:photoIndex withObject:image];
     }
     //NSLog(@"get photo at index: %d", photoIndex);
-    return [_images objectAtIndex:photoIndex];
+    //return [_images objectAtIndex:photoIndex];
+    return image;
 }
 
 - (id<NIPagingScrollViewPage>)pagingScrollView:(NIPagingScrollView *)pagingScrollView pageViewForIndex:(NSInteger)pageIndex {
