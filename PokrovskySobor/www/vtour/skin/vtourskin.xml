@@ -591,6 +591,7 @@
 			set(plugin[data].soundOn,false);
 			set(layer[skin_btn_audio].crop, '64|647|64|64');,
 			set(plugin[data].soundOn,true);
+			playbackgroundsound();
 			set(layer[skin_btn_audio].crop, '0|647|64|64');
 		);
 	</action>

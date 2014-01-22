@@ -2,15 +2,18 @@
 onstart="startup();">
 
     <!--************** KrPano plugins and datas ***************************************************-->
-    <plugin name="data" keep="true" soundOn="true" mapurl="map/spot.png" mapactiveurl="map/spotactive.png"/>
+    <plugin name="data" keep="true" soundOn="true" mapurl="map/spot.png" mapactiveurl="map/spotactive.png" soundurl=""/>
 
     <!--************** Sound plugin ***************************************************-->
-    <plugin name="soundinterface" preload="true" url="plugins/soundinterface.swf" alturl="plugins/soundinterface.js" keep="true"/>
+    <plugin name="soundinterface" preload="true" url="plugins/soundinterface.swf" alturl="plugins/soundinterface.js" keep="true" rootpath="%BASEDIR%/audio"/>
 
     <action name="playbackgroundsound">
         stopallsounds();
         if(get(plugin[data].soundOn),
-            if(%1 != null, playsound(backgroundsound, %BASEDIR%/audio/%1)));
+            if(get(plugin[data].soundurl) != "",
+                playsound(backgroundsound, get(plugin[data].soundurl));
+            );
+        );
     </action>
 
     <!--************** Plugin map level 1 *****************************************************************-->
@@ -311,13 +314,17 @@ onstart="startup();">
     	loadmap(1);
 		unselectmapspots_1();
 		selectmapspot_1(%1, %2);
-        playbackgroundsound(%3);
+        set(plugin[data].soundurl, "");
+        if(%3 != null, set(plugin[data].soundurl, %3););
+        playbackgroundsound();
 	</action>
     <action name="onxmlcompleteaction_2">
     	loadmap(2);
 		unselectmapspots_2();
 		selectmapspot_2(%1, %2);
-        playbackgroundsound(%3);
+        set(plugin[data].soundurl, "");
+        if(%3 != null, set(plugin[data].soundurl, %3););
+        playbackgroundsound();
 	</action>
 
 	<include url="skin/vtourskin.xml" />
