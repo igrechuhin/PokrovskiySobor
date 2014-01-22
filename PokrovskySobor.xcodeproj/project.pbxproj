@@ -42,6 +42,9 @@
 		1CB2A2E9188C54DD003EC6A7 /* GalleryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2A2E7188C54DC003EC6A7 /* GalleryController.xib */; };
 		1CB2A2EC188C5582003EC6A7 /* gallery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2A2EA188C5580003EC6A7 /* gallery.jpg */; };
 		1CB2A2ED188C5582003EC6A7 /* gallery@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2A2EB188C5581003EC6A7 /* gallery@2x.jpg */; };
+		1CB2A2F01890569F003EC6A7 /* CaptionedPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB2A2EF1890569E003EC6A7 /* CaptionedPhotoView.m */; };
+		1CB2A2F318905D9E003EC6A7 /* close_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2A2F118905D9D003EC6A7 /* close_dark.png */; };
+		1CB2A2F418905D9F003EC6A7 /* close_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2A2F218905D9E003EC6A7 /* close_dark@2x.png */; };
 		1CD83F6E17EE250C005EE08D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD83F6D17EE250C005EE08D /* RootViewController.m */; };
 		1CD83F7117EE450B005EE08D /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD83F7017EE450B005EE08D /* Stack.m */; };
 		1CD8AF0F17DF10DD00F7AF5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD8AF0E17DF10DD00F7AF5A /* UIKit.framework */; };
@@ -156,6 +159,10 @@
 		1CB2A2E7188C54DC003EC6A7 /* GalleryController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryController.xib; sourceTree = "<group>"; };
 		1CB2A2EA188C5580003EC6A7 /* gallery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gallery.jpg; sourceTree = "<group>"; };
 		1CB2A2EB188C5581003EC6A7 /* gallery@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "gallery@2x.jpg"; sourceTree = "<group>"; };
+		1CB2A2EE1890569D003EC6A7 /* CaptionedPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptionedPhotoView.h; sourceTree = "<group>"; };
+		1CB2A2EF1890569E003EC6A7 /* CaptionedPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptionedPhotoView.m; sourceTree = "<group>"; };
+		1CB2A2F118905D9D003EC6A7 /* close_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_dark.png; sourceTree = "<group>"; };
+		1CB2A2F218905D9E003EC6A7 /* close_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_dark@2x.png"; sourceTree = "<group>"; };
 		1CD83F6C17EE250C005EE08D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1CD83F6D17EE250C005EE08D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		1CD83F6F17EE450B005EE08D /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -327,12 +334,16 @@
 				1CD8AF4317DF419C00F7AF5A /* www */,
 				1CD8AF1D17DF10DD00F7AF5A /* AppDelegate.h */,
 				1CD8AF1E17DF10DD00F7AF5A /* AppDelegate.m */,
+				1CB2A2EE1890569D003EC6A7 /* CaptionedPhotoView.h */,
+				1CB2A2EF1890569E003EC6A7 /* CaptionedPhotoView.m */,
 				1CD8AF1517DF10DD00F7AF5A /* Supporting Files */,
 				1CD8AF4517E0D30F00F7AF5A /* CCircleButton.h */,
 				1CD8AF4617E0D30F00F7AF5A /* CCircleButton.m */,
 				1CD83F6C17EE250C005EE08D /* RootViewController.h */,
 				1CF33C0B1882E6A900E5E9DE /* close@2x.png */,
 				1CF33C0C1882E6AA00E5E9DE /* close.png */,
+				1CB2A2F118905D9D003EC6A7 /* close_dark.png */,
+				1CB2A2F218905D9E003EC6A7 /* close_dark@2x.png */,
 				1CB2A2EA188C5580003EC6A7 /* gallery.jpg */,
 				1CB2A2EB188C5581003EC6A7 /* gallery@2x.jpg */,
 				1CD83F6D17EE250C005EE08D /* RootViewController.m */,
@@ -457,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB2A2F318905D9E003EC6A7 /* close_dark.png in Resources */,
 				1CB2A2E9188C54DD003EC6A7 /* GalleryController.xib in Resources */,
 				1CD8AF1917DF10DD00F7AF5A /* InfoPlist.strings in Resources */,
 				1CB2A2EC188C5582003EC6A7 /* gallery.jpg in Resources */,
@@ -465,6 +477,7 @@
 				1CD8AF2117DF10DD00F7AF5A /* Default.png in Resources */,
 				1CD8AF2317DF10DD00F7AF5A /* Default@2x.png in Resources */,
 				1CD8AF2517DF10DD00F7AF5A /* Default-568h@2x.png in Resources */,
+				1CB2A2F418905D9F003EC6A7 /* close_dark@2x.png in Resources */,
 				1C35595B187BFF3400D3661E /* NimbusPhotos.bundle in Resources */,
 				1CD8AF4417DF419C00F7AF5A /* www in Resources */,
 				1CB2A2ED188C5582003EC6A7 /* gallery@2x.jpg in Resources */,
@@ -522,6 +535,7 @@
 				1C355948187B4BCF00D3661E /* NIDeviceOrientation.m in Sources */,
 				1CD8AF1F17DF10DD00F7AF5A /* AppDelegate.m in Sources */,
 				1C35594D187B4BCF00D3661E /* NIInvocationMethods.m in Sources */,
+				1CB2A2F01890569F003EC6A7 /* CaptionedPhotoView.m in Sources */,
 				1C355952187B4BCF00D3661E /* NIOperations.m in Sources */,
 				1C355954187B4BCF00D3661E /* NIRuntimeClassModifications.m in Sources */,
 				1CB2A2E8188C54DD003EC6A7 /* GalleryController.m in Sources */,

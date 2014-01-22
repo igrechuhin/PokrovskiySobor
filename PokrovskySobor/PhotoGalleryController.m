@@ -7,6 +7,7 @@
 //
 
 #import "PhotoGalleryController.h"
+#import "CaptionedPhotoView.h"
 
 @interface PhotoGalleryController ()
 
@@ -132,9 +133,10 @@
     return image;
 }
 
+/*
 - (id<NIPagingScrollViewPage>)pagingScrollView:(NIPagingScrollView *)pagingScrollView pageViewForIndex:(NSInteger)pageIndex {
     return [self.photoAlbumView pagingScrollView:pagingScrollView pageViewForIndex:pageIndex];
-}
+}*/
 
 - (void)setChromeVisibility:(BOOL)isVisible animated:(BOOL)animated
 {
@@ -146,6 +148,30 @@
     }
     else closeButton.hidden = YES;
     
+}
+
+- (UIView<NIPagingScrollViewPage>*)pagingScrollView:(NIPagingScrollView *)pagingScrollView pageViewForIndex:(NSInteger)pageIndex {
+    UIView<NIPagingScrollViewPage>* pageView = nil;
+    NSString* reuseIdentifier = NSStringFromClass([CaptionedPhotoView class]);
+    pageView = [pagingScrollView dequeueReusablePageWithIdentifier:reuseIdentifier];
+    if (nil == pageView) {
+        pageView = [[CaptionedPhotoView alloc] init];
+        pageView.reuseIdentifier = reuseIdentifier;
+    }
+    
+    NIPhotoScrollView* photoScrollView = (NIPhotoScrollView *)pageView;
+    photoScrollView.photoScrollViewDelegate = self.photoAlbumView;
+    photoScrollView.zoomingAboveOriginalSizeIsEnabled = [self.photoAlbumView isZoomingAboveOriginalSizeEnabled];
+    
+    NSString *file = [NSString stringWithFormat:@"%d", pageIndex+1];
+    NSString *dir = @"www/images/gallery/";
+    NSString *path = [[NSBundle mainBundle] pathForResource:file ofType:@"txt" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/captions"]];
+    NSString *caption = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    
+    CaptionedPhotoView* captionedView = (CaptionedPhotoView *)pageView;
+    captionedView.caption = caption;
+    
+    return pageView;
 }
 
 @end

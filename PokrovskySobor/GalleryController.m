@@ -27,7 +27,7 @@
         // Добавляем кнопку для закрытия
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(698.0, 30.0, 40.0, 40.0);
-        [button setImage:[UIImage imageNamed:@"close.png"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"close_dark.png"] forState:UIControlStateNormal];
         [button addTarget:(id)self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
         self.closeButton = button;
         [self.view addSubview:self.closeButton];
