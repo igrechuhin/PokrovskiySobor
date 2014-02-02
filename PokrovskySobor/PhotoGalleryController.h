@@ -18,6 +18,7 @@
     NSMutableArray *_images;
     
     BOOL _isLoaded;
+    BOOL _isTouched;
     NSInteger _photosNumber;
 }
 

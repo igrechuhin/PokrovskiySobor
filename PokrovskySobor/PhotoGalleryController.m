@@ -8,6 +8,7 @@
 
 #import "PhotoGalleryController.h"
 #import "CaptionedPhotoView.h"
+#import "NIPhotoScrollView.h"
 
 @interface PhotoGalleryController ()
 
@@ -21,6 +22,7 @@
     if ((self = [self initWithNibName:nil bundle:nil])) {
         self.galleryName = galleryName;
         _isLoaded = NO;
+        _isTouched = NO;
         
         // Добавляем кнопку для закрытия
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -45,16 +47,6 @@
         [super viewDidLoad];
     if (!_isLoaded)
     {
-/*        NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
-        NSArray *contents = [fileManager contentsOfDirectoryAtURL:bundleURL
-                                       includingPropertiesForKeys:@[]
-                                                          options:NSDirectoryEnumerationSkipsHiddenFiles
-                                                            error:nil];
-        
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"pathExtension == 'jpg'"];
-        _photosNumber = [[contents filteredArrayUsingPredicate:predicate] count];*/
-        
         NSString *dir = @"www/images/gallery/";
         _photosNumber = [[[NSBundle mainBundle] pathsForResourcesOfType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]] count];
         
@@ -107,30 +99,56 @@
     return _photosNumber;
 }
 
+- (void)decompressImage: (UIImage*)inImage atIndex:(NSInteger)photoIndex
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImage *image = inImage;
+            UIGraphicsBeginImageContextWithOptions(image.size, YES, 0);
+            [image drawAtPoint:CGPointZero];
+            image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.photoAlbumView didLoadPhoto: image
+                                          atIndex: photoIndex
+                                        photoSize: NIPhotoScrollViewPhotoSizeOriginal];
+            });
+    });
+
+}
+
 - (UIImage *)photoAlbumScrollView: (NIPhotoAlbumScrollView *)photoAlbumScrollView
                      photoAtIndex: (NSInteger)photoIndex
                         photoSize: (NIPhotoScrollViewPhotoSize *)photoSize
                         isLoading: (BOOL *)isLoading
           originalPhotoDimensions: (CGSize *)originalPhotoDimensions {
     UIImage *image = [_images objectAtIndex:photoIndex];
+    
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *bfile = [NSString stringWithFormat:@"%db", photoIndex+1];
+    NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
+    NSString *dir = @"www/images/gallery/";
+    UIImage *bigImage = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
+    if (!_isTouched) [self decompressImage:bigImage atIndex:photoIndex];
+
     if ((NSNull *)image != [NSNull null])
     {
-        *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
+        *photoSize = NIPhotoScrollViewPhotoSizeThumbnail;
+        *originalPhotoDimensions = [bigImage size];
+        *isLoading = YES;
     }
     else
     {
-        NSBundle *mainBundle = [NSBundle mainBundle];
-        NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
-        NSString *dir = @"www/images/gallery/";
-        image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
-/*        image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/thumbs"]]];*/
-        *photoSize = NIPhotoScrollViewPhotoSizeOriginal;
-        *originalPhotoDimensions = [image size];
-        //[_images replaceObjectAtIndex:photoIndex withObject:image];
+        image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:bfile ofType:@"jpg" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/thumbs"]]];
+        *photoSize = NIPhotoScrollViewPhotoSizeThumbnail;
+        *originalPhotoDimensions = [bigImage size];
+        *isLoading = YES;
+        
+        [_images replaceObjectAtIndex:photoIndex withObject:image];
     }
     //NSLog(@"get photo at index: %d", photoIndex);
-    //return [_images objectAtIndex:photoIndex];
-    return image;
+    return [_images objectAtIndex:photoIndex];
+    //return image;
 }
 
 /*
@@ -173,5 +191,25 @@
     
     return pageView;
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _isTouched = YES;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _isTouched = NO;
+    for (NIPhotoScrollView* page in self.photoAlbumView.visiblePages)
+    {
+        NSInteger photoIndex = page.pageIndex;
+        NSBundle *mainBundle = [NSBundle mainBundle];
+        NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
+        NSString *dir = @"www/images/gallery/";
+        UIImage *bigImage = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
+        [self decompressImage:bigImage atIndex:photoIndex];
+    }
+}
+
 
 @end
