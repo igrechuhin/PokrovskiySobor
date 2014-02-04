@@ -22,7 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"gallery.jpg"]]];
+        [self.view setBackgroundColor:[UIColor colorWithPatternImage:[[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"gallery" ofType:@"jpg"]]]];
         
         // Добавляем кнопку для закрытия
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
