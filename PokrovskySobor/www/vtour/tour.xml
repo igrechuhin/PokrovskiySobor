@@ -1,11 +1,10 @@
-<krpano version="1.17"   title="Покровский собор"
-onstart="startup();">
+<krpano version="1.17" title="Покровский собор" onstart="startup();" showerrors="false" debugmode="false">
 
     <!--************** KrPano plugins and datas ***************************************************-->
     <plugin name="data" keep="true" soundOn="true" mapurl="map/spot.png" mapactiveurl="map/spotactive.png" soundurl=""/>
 
     <!--************** Sound plugin ***************************************************-->
-    <plugin name="soundinterface" preload="true" url="plugins/soundinterface.swf" alturl="plugins/soundinterface.js" keep="true" rootpath="%BASEDIR%/audio"/>
+    <plugin name="soundinterface" preload="true" url="plugins/soundinterface.swf" alturl="plugins/soundinterface.js" keep="true"/>
 
     <action name="playbackgroundsound">
         stopallsounds();
@@ -315,7 +314,7 @@ onstart="startup();">
 		unselectmapspots_1();
 		selectmapspot_1(%1, %2);
         set(plugin[data].soundurl, "");
-        if(%3 != null, set(plugin[data].soundurl, %3););
+        if(%3 != null, set(plugin[data].soundurl, audio/%3););
         playbackgroundsound();
 	</action>
     <action name="onxmlcompleteaction_2">
@@ -323,7 +322,7 @@ onstart="startup();">
 		unselectmapspots_2();
 		selectmapspot_2(%1, %2);
         set(plugin[data].soundurl, "");
-        if(%3 != null, set(plugin[data].soundurl, %3););
+        if(%3 != null, set(plugin[data].soundurl, audio/%3););
         playbackgroundsound();
 	</action>
 
