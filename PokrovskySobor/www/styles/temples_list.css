@@ -572,7 +572,7 @@ div, ul {
   left: 668px;
   top: 660px;
   background-image: url('../images/generated/plans/level1-s8e1e0bed49.png');
-  background-position: -461px -457px;
+  background-position: -364px -457px;
   background-repeat: no-repeat;
   height: 160px;
   width: 312px;
@@ -603,18 +603,18 @@ div, ul {
   background-position: 0 -457px;
   background-repeat: no-repeat;
   height: 287px;
-  width: 258px;
+  width: 161px;
 }
 /* line 139, ../../app/styles/temples_list.scss */
 #level1 div.center-underchurch .panorama {
-  left: 197px;
+  left: 106px;
 }
 /* line 144, ../../app/styles/temples_list.scss */
 #level1 div.papert {
   left: 537px;
   top: 990px;
   background-image: url('../images/generated/plans/level1-s8e1e0bed49.png');
-  background-position: -258px -457px;
+  background-position: -161px -457px;
   background-repeat: no-repeat;
   height: 293px;
   width: 203px;
