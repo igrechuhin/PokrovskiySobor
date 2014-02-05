@@ -36,11 +36,11 @@ $(function () {
     var colors = ['light-blue', 'green', 'yellow'].join(' '),
         action = {
             'nonpro-photo': {
-                'price': '160',
+                'price': '0',
                 'color': 'light-blue'
             },
             'nonpro-video': {
-                'price': '180',
+                'price': '0',
                 'color': 'green'
             },
             'audio': {
@@ -172,14 +172,14 @@ $(function() {
 function scrollToPage(page)
 {
     $(window).scrollTop(0);
-    
+
     var $navigation = $('.navigation'),
     $dots = $navigation.children(),
     $pageHeader = $('.page-header'),
     id = 'nav' + page;
-    
+
     $dots.removeClass('active');
     $('#'+id).addClass('active');
-    
+
     $pageHeader.html($pageHeader.data(id));
 }
