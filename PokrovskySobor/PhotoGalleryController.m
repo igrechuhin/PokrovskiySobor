@@ -134,10 +134,6 @@
     NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
     NSString *dir = @"www/images/gallery/";
     UIImage *bigImage = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
-    if (!_isTouched)
-    {
-        //[self decompressImage:bigImage atIndex:photoIndex];
-    }
     CGSize size = [bigImage size];
 
     if ((NSNull *)image != [NSNull null])
