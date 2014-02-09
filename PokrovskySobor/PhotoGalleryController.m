@@ -62,6 +62,11 @@
         [self.photoScrubberView reloadData];
         
         _isLoaded = YES;
+        
+        NSBundle *mainBundle = [NSBundle mainBundle];
+        NSString *file = [NSString stringWithFormat:@"%d", 1];
+        UIImage *bigImage = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
+        [self decompressImage:bigImage atIndex:0];
     }
 }
 
@@ -129,19 +134,23 @@
     NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
     NSString *dir = @"www/images/gallery/";
     UIImage *bigImage = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
-    if (!_isTouched) [self decompressImage:bigImage atIndex:photoIndex];
+    if (!_isTouched)
+    {
+        //[self decompressImage:bigImage atIndex:photoIndex];
+    }
+    CGSize size = [bigImage size];
 
     if ((NSNull *)image != [NSNull null])
     {
         *photoSize = NIPhotoScrollViewPhotoSizeThumbnail;
-        *originalPhotoDimensions = [bigImage size];
+        *originalPhotoDimensions = size;
         *isLoading = YES;
     }
     else
     {
         image = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:bfile ofType:@"jpg" inDirectory:[[dir stringByAppendingString:_galleryName] stringByAppendingString:@"/thumbs"]]];
         *photoSize = NIPhotoScrollViewPhotoSizeThumbnail;
-        *originalPhotoDimensions = [bigImage size];
+        *originalPhotoDimensions = size;
         *isLoading = YES;
         
         [_images replaceObjectAtIndex:photoIndex withObject:image];
@@ -200,15 +209,25 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     _isTouched = NO;
-    for (NIPhotoScrollView* page in self.photoAlbumView.visiblePages)
-    {
-        NSInteger photoIndex = page.pageIndex;
-        NSBundle *mainBundle = [NSBundle mainBundle];
-        NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
-        NSString *dir = @"www/images/gallery/";
-        UIImage *bigImage = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
-        [self decompressImage:bigImage atIndex:photoIndex];
-    }
+    NSInteger photoIndex = self.photoAlbumView.centerPageIndex;
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
+    NSString *dir = @"www/images/gallery/";
+    UIImage *bigImage = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
+    [self decompressImage:bigImage atIndex:photoIndex];
+}
+
+- (void) pagingScrollViewDidChangePages:(NIPagingScrollView *)pagingScrollView
+{
+    [super pagingScrollViewDidChangePages:pagingScrollView];
+    
+    if (_isTouched) return;
+    NSInteger photoIndex = self.photoAlbumView.centerPageIndex;
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *file = [NSString stringWithFormat:@"%d", photoIndex+1];
+    NSString *dir = @"www/images/gallery/";
+    UIImage *bigImage = [UIImage imageWithContentsOfFile:[mainBundle pathForResource:file ofType:@"jpg" inDirectory:[dir stringByAppendingString:_galleryName]]];
+    [self decompressImage:bigImage atIndex:photoIndex];
 }
 
 
