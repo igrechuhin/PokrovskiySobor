@@ -8,22 +8,35 @@
 	<string>Покровский собор</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>icon29.png</string>
+		<string>icon58.png</string>
+		<string>icon80.png</string>
+		<string>icon40.png</string>
+		<string>icon100.png</string>
+		<string>icon50.png</string>
+		<string>icon152.png</string>
+		<string>icon76.png</string>
+		<string>icon144.png</string>
+		<string>icon72.png</string>
+	</array>
 	<key>CFBundleIcons~ipad</key>
 	<dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>icon58</string>
-				<string>icon29</string>
-				<string>icon80</string>
-				<string>icon40</string>
-				<string>icon100</string>
-				<string>icon50</string>
-				<string>icon152</string>
-				<string>icon76</string>
-				<string>icon144</string>
-				<string>icon72</string>
+				<string>icon58.png</string>
+				<string>icon29.png</string>
+				<string>icon80.png</string>
+				<string>icon40.png</string>
+				<string>icon100.png</string>
+				<string>icon50.png</string>
+				<string>icon152.png</string>
+				<string>icon76.png</string>
+				<string>icon144.png</string>
+				<string>icon72.png</string>
 			</array>
 		</dict>
 	</dict>
